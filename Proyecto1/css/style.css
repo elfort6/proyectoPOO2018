@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.encabezado {
+    background: linear-gradient(135deg, #002484 0%, rgba(229, 252, 255, 1) 46%, rgba(255, 255, 255, 1) 52%, rgba(229, 252, 255, 1) 57%, #002484 100%);
+    padding: 5px;
+    padding-top: 20px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.encabezado p{
+    font-weight: bold;
+}
+
+.encabezado2{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
+    background: #002484;
+    height: 50px;
+    /* padding-top: 10px; */
+    /* display: block;  */
+}
+
+
+.encabezado2 label{
+    float: right;
+    margin-right: 40px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.logo-unah{
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size:1.3em;
+    font-weight: bold;
+    color: white;
+}
+
+.opciones:hover{
+    background: grey;
+}
+
+.navegacion{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ingresar{
+    position: absolute;
+    right: 50px;
+}
+
+.prueba{
+    text-align: justify;
+    /* margin-right: 50px; */
+}
+
+.carousel-inner .carousel-item img{
+    width: 100%;
+}
+
+#demo{
+    margin-top: 33px;
+}
+
+@media (min-width:768px){
+    #demo{
+        margin-top: 0;
+    }
+}
+
+footer{
+    margin: 0;
+    /* height: 360px; */
+    background: #002484;
+    background-image: url(../img/footer-bg.png);
+    border-top: 5px solid #001a4d;
+}
+
+footer .fondo{
+    height: 360px;
+    padding-top: 100px;
+    background-image: url(img/footer-bg.png);
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+.margen-inicial{
+    padding-top: 25px; 
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.contacto{
+    background: #ffcc00;
+    border-radius: 0;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.8em;
+}
