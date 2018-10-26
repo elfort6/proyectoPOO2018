@@ -1,0 +1,43 @@
+.boton-menu{
+    width: 100%;
+    margin-top: 5px;
+}
+
+p, .margen{
+    /* padding: 0; */
+    margin: 0;
+}
+
+.boton-menu:hover{
+    background:rgb(70, 67, 255);
+    color: white;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.abajo{
+    width: 100%;
+    position: relative;
+}
+
+.barra1{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background: #002484;
+    height: 50px;
+}
+
+.dipp{
+    padding: 0;
+    margin: 0;
+    font-size: 1.8em;
+    color: white;
+    font-weight: bold;
+    
+}

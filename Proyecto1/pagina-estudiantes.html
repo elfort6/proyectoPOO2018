@@ -8,59 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fontello.css" /><!-- para el icono del menu -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <style>
-        .btn{
-            width: 99%;
-            margin: 1px;
-        }
+    <link rel="stylesheet" href="css/pagina-estudiantes.css">
 
-        p, .margen{
-            padding: 0;
-            margin: 0;
-        }
-
-        .btn:hover{
-            background:rgb(70, 67, 255);
-            color: white;
-        }
-
-        .banner img{
+    <!-- <style>
+        .boton-menu{
             width: 100%;
-        }
-        
-        footer{
-            width: 100%;
-            position: absolute;
-            bottom: 0;
+            background: burlywood;
         }
 
-        .barra1{
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
-            background: #002484;
-            height: 50px;
+        .margen{
+            background: green;
         }
-
-        .dipp{
-            padding: 0;
-            margin: 0;
-            font-size: 1.8em;
-            color: white;
-            font-weight: bold;
-        }
-    </style>
+    </style> -->
 </head>
 
 <body>
 
     <!-- Begin ///////////////////////////////////// -->
 
-    <div class="fondo">
-        <header>
+    <div >
+        <header class="container">
             <div class="banner d-none d-md-block">
                 <img src="img/banner-superior.jpg" alt="banner">
             </div>
@@ -69,43 +36,49 @@
             </nav>
         </header>
 
-        <div class="contenido1">
-            <p>Servicios al Estudiante</p>
-            <p>Bienvenid@:CHRISTHOPER DANIEL PORTILLO REYES</p>
+        <div class="contenido1 container">
+            <p><h4>Servicios al Estudiante</h4></p>
+            <p>Bienvenid@: CHRISTHOPER DANIEL PORTILLO REYES </p>
             <p>Tu cuenta de correo electrónico institucional es: christhoper.portillo@unah.hn</p>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-light">Light</button>
         </div>
 
         <hr>
 
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 col-sm-4 margen"><button type="button" class="btn btn-light">Historial académico</button></div>
-                <div class="col-12 col-sm-4 margen"><button type="button" class="btn btn-light">Solicitudes</button></div>
-                <div class="col-12 col-sm-4 margen"><button type="button" class="btn btn-light">Matrícula</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Puedes ver tu historial academico" class="btn btn-light boton-menu">Historial académico</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Ahora puedes hacer tu solicitud de cambio de centro, carrera, activación de pago para examen de reposición, historiales y certificaciones " class="btn btn-light boton-menu">Solicitudes</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Realiza tu Matrícula del periodo " class="btn btn-light boton-menu">Matrícula</button></div>
             </div>
 
             <div class="row text-center">
-                <div class="col-12 col-sm-12 col-md-4  margen"><button type="button" class="btn btn-light">Matrícula de
+                <div class="col-12 col-sm-12 col-md-4  margen"><button type="button" title="Realiza tu Matrícula de Laboratorio" class="btn btn-light boton-menu">Matrícula de
                         Laboratorio</button></div>
-                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" class="btn btn-light">Censo de
+                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Realiza tu censo de periodo académico" class="btn btn-light boton-menu">Censo de
                         Matrícula</button></div>
-                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" class="btn btn-light">Cambio Clave</button></div>
+                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Cambia tu clave de acceso al sistema" class="btn btn-light boton-menu">Cambio Clave</button></div>
             </div>
 
             <div class="row text-center">
                 <div class="col-2 d-none margen"></div>
-                <div class="col-12 col-sm-6 margen"><button type="button" class="btn btn-light">Ver Calificaciones del
+                <div class="col-12 col-sm-6 margen"><button type="button" title="Puedes ver las notas del actual periodo" class="btn btn-light boton-menu">Ver Calificaciones del
                         período</button></div>
-                <div class="col-12 col-sm-6 margen"><button type="button" class="btn btn-light">Ver Programación
+                <div class="col-12 col-sm-6 margen"><button type="button" title="Podrás ver la programación académica del siguiente periodo" class="btn btn-light boton-menu disabled">Ver Programación
                         Académica</button></div>
                 <div class="col-2 d-none margen"></div>
             </div>
         </div>
 
-        <footer class="text-center">
+        <br>
+        <br>
+        <br>
+
+        <footer class="text-center abajo">
             <hr class="margen">
             <p class="margen">© Derechos Reservados UNAH 2013</p>
-            <a href="#">
+            <a href="#" title="esta es la matricula">
                 <p class="margen"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
             </a>
         </footer>
