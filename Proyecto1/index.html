@@ -14,7 +14,7 @@
 
 <body>
 
-    <!-- Elvin /////////////// -->
+    <!--/////////////// -->
     <div class="">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -31,13 +31,44 @@
                             <li class="nav-item"><a class="nav-link" href="facultades.html">Facultades</a></li>
                             <li class="nav-item"><a class="nav-link" href="otra-opcion.html">otra opcion</a></li>
                         </ul>
-                        <a class="btn1 btn-outline-login" href="login.html " role="button"> Ingresar </a>
+                        <a class="btn1 btn-outline-login" href="#" data-toggle="modal" data-target=".bs-example-modal-sm" role="button"> Ingresar </a>
                     </div>
                 </div>
             </nav>
         </header>
     </div>
-    <!-- fin-Elvin//////////// -->
+    <!-- //////////// -->
+
+    <!--modal para iniciar sesión-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Iniciar sesión</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="archivo_destino.php" method="post" enctype="application/x-www-form-urlencoded">
+                        <div class="form-group">
+                            <label for="control1_nombre">Usuario</label>
+                            <input type="text" name="datos_introducidos_usuario" class="form-control" id="control1_nombre"
+                                placeholder="#Cuenta o #Empleado" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="control1_contraseña">Contraseña</label>
+                            <input type="password" name="datos_introducidos_contraseña" class="form-control" id="control1_contraseña"
+                                placeholder="Contraseña" required>
+                        </div>
+                        <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember"> Recuérdame.
+                                </label>
+                        </div>
+                        <button type="submit" class="btn-success btn-block btn1">Ingresar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Slider //////////////////////// -->
     <div id="demo" class="carousel slide slider1" data-ride="carousel">

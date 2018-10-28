@@ -4,40 +4,61 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Alumno</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fontello.css" /><!-- para el icono del menu -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/pagina-estudiantes.css">
 
-    <!-- <style>
-        .boton-menu{
-            width: 100%;
-            background: burlywood;
-        }
-
-        .margen{
-            background: green;
-        }
-    </style> -->
 </head>
 
 <body>
 
     <!-- Begin ///////////////////////////////////// -->
 
-    <div >
-        <header class="container">
-            <div class="banner d-none d-md-block">
-                <img src="img/banner-superior.jpg" alt="banner">
-            </div>
-            <nav class="barra1 text-center d-md-none">
-                <p class="dipp">DIPP-UNAH</p>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background:#184267;">
+                <!-- #184267-->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="pagina-estudiantes.html"><img src="img/DIPP.png" alt="la imagen se mamo"></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link op1" href="#">Centros Regionales</a></li>
+                            <li class="nav-item"><a class="nav-link op1" href="#">Facultades</a></li>
+                            <li class="nav-item"><a class="nav-link op1" href="#">otra opcion</a></li>
+                        </ul>
+
+                        <div class="dropdown" style="margin-left:0; ">
+                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown">
+                                <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="55px" alt="Cinque Terre"> Nombre-Estudiante
+                            </button>
+                            <div class="dropdown-menu menu-perfil">
+                                <a class="dropdown-item menu-item" href="#">Correo-institucional</a>
+                                <a class="dropdown-item menu-item" href="#">Cambiar Contraseña</a>
+                                <hr>
+                                <a class="dropdown-item menu-item" href="index.html">Salir</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </nav>
+            <!-- <nav class="barra1 text-center d-md-none">
+                <p class="dipp">DIPP-UNAH</p>
+            </nav> -->
         </header>
 
         <div class="contenido1 container">
-            <p><h4>Servicios al Estudiante</h4></p>
+            <p>
+                <h4>Servicios al Estudiante</h4>
+            </p>
             <p>Bienvenid@: CHRISTHOPER DANIEL PORTILLO REYES </p>
             <p>Tu cuenta de correo electrónico institucional es: christhoper.portillo@unah.hn</p>
             <button type="button" class="btn btn-light">Light</button>
@@ -48,24 +69,32 @@
 
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 col-sm-4 margen"><button type="button" title="Puedes ver tu historial academico" class="btn btn-light boton-menu">Historial académico</button></div>
-                <div class="col-12 col-sm-4 margen"><button type="button" title="Ahora puedes hacer tu solicitud de cambio de centro, carrera, activación de pago para examen de reposición, historiales y certificaciones " class="btn btn-light boton-menu">Solicitudes</button></div>
-                <div class="col-12 col-sm-4 margen"><button type="button" title="Realiza tu Matrícula del periodo " class="btn btn-light boton-menu">Matrícula</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Puedes ver tu historial academico"
+                        class="btn btn-light boton-menu">Historial académico</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Ahora puedes hacer tu solicitud de cambio de centro, carrera, activación de pago para examen de reposición, historiales y certificaciones "
+                        class="btn btn-light boton-menu">Solicitudes</button></div>
+                <div class="col-12 col-sm-4 margen"><button type="button" title="Realiza tu Matrícula del periodo "
+                        class="btn btn-light boton-menu">Matrícula</button></div>
             </div>
 
             <div class="row text-center">
-                <div class="col-12 col-sm-12 col-md-4  margen"><button type="button" title="Realiza tu Matrícula de Laboratorio" class="btn btn-light boton-menu">Matrícula de
+                <div class="col-12 col-sm-12 col-md-4  margen"><button type="button" title="Realiza tu Matrícula de Laboratorio"
+                        class="btn btn-light boton-menu">Matrícula de
                         Laboratorio</button></div>
-                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Realiza tu censo de periodo académico" class="btn btn-light boton-menu">Censo de
+                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Realiza tu censo de periodo académico"
+                        class="btn btn-light boton-menu">Censo de
                         Matrícula</button></div>
-                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Cambia tu clave de acceso al sistema" class="btn btn-light boton-menu">Cambio Clave</button></div>
+                <div class="col-12 col-sm-6  col-md-4 margen"><button type="button" title="Cambia tu clave de acceso al sistema"
+                        class="btn btn-light boton-menu">Cambio Clave</button></div>
             </div>
 
             <div class="row text-center">
                 <div class="col-2 d-none margen"></div>
-                <div class="col-12 col-sm-6 margen"><button type="button" title="Puedes ver las notas del actual periodo" class="btn btn-light boton-menu">Ver Calificaciones del
+                <div class="col-12 col-sm-6 margen"><button type="button" title="Puedes ver las notas del actual periodo"
+                        class="btn btn-light boton-menu">Ver Calificaciones del
                         período</button></div>
-                <div class="col-12 col-sm-6 margen"><button type="button" title="Podrás ver la programación académica del siguiente periodo" class="btn btn-light boton-menu disabled">Ver Programación
+                <div class="col-12 col-sm-6 margen"><button type="button" title="Podrás ver la programación académica del siguiente periodo"
+                        class="btn btn-light boton-menu disabled">Ver Programación
                         Académica</button></div>
                 <div class="col-2 d-none margen"></div>
             </div>

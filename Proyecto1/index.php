@@ -20,7 +20,7 @@ if (isset($_SESSION['name'])==false){
 
 <body>
 
-    <!-- Elvin /////////////// -->
+    <!-- ///////////////// -->
     <div class="">
         <header >
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,32 +43,32 @@ if (isset($_SESSION['name'])==false){
             </nav>
         </header>
     </div>
-    <!-- fin-Elvin//////////// -->
+    <!-- ////////////// -->
 
 
     <!--modal para iniciar sesión-->
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-          <div class="modal-header">
-           <h2>Iniciar sesión</h2>
-          </div>
-          <div class="modal-body">
-            <form action="archivo_destino.php" method="post" enctype="application/x-www-form-urlencoded">
-              <div class="form-group">
-                <label for="control1_nombre">Usuario</label>
-                <input type="text" name="datos_introducidos_usuario" class="form-control" id="control1_nombre" placeholder="Username" required>
-              </div>
-              <div class="form-group">
-                <label for="control1_contraseña">Contraseña</label>
-                <input type="password" name="datos_introducidos_contraseña" class="form-control" id="control1_contraseña" placeholder="Password" required>
-              </div>
-              <button type="submit" class="btn btn-success btn-block">Entrar</button>
-            </form>
-          </div>
-      </div>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2>Iniciar sesión</h2>
+            </div>
+            <div class="modal-body">
+                <form action="archivo_destino.php" method="post" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="control1_nombre">Usuario</label>
+                    <input type="text" name="datos_introducidos_usuario" class="form-control" id="control1_nombre" placeholder="#Cuenta o #Empleado" required>
+                </div>
+                <div class="form-group">
+                    <label for="control1_contraseña">Contraseña</label>
+                    <input type="password" name="datos_introducidos_contraseña" class="form-control" id="control1_contraseña" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                </form>
+            </div>
+        </div>
+        </div>
     </div>
-  </div>
     
     <!-- Slider //////////////////////// -->
     <div id="demo" class="carousel slide slider1" data-ride="carousel">
