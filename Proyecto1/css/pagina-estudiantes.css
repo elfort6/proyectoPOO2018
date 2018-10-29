@@ -83,3 +83,14 @@ p, .margen{
 .op1:active{
     color:white !important;
 }
+
+@media only screen and (max-width: 991px){
+    .op1:hover{
+        transform:scale(1);;
+    }
+}
+
+.defc{
+    margin: 0;
+    padding: 0;
+}
