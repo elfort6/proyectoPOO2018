@@ -20,29 +20,35 @@ if (isset($_SESSION['name'])){
 
 <body>
 
-    <!-- Elvin /////////////// -->
-    <div class="">
+  <!-- Elvin /////////////// -->
+  <div class="container-fluid">
         <header >
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html"><img src="img/logo-unah.png" alt="la imagen se mamo" width="135"></a>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="home.php">
+                    
+                    <img src="img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
+                    
+                    </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="centros-regionales.html">Matricula</a></li>
+                        <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
                         <li class="nav-item"><a class="nav-link" href="facultades.html">solicitudes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="otra-opcion.html">calificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
                         
                     </ul>
                     
-                    <li class="nav-item dropdown navbar-nav">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php print $_SESSION['name'];?>
-                             </a>
-                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                        <div class="dropdown" style="margin-left:0; ">
+                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
+                                <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
+                                <?php print $_SESSION['name'];?>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                              
                              <a class="dropdown-item" href="#">configuraciones</a>
                              
@@ -50,7 +56,7 @@ if (isset($_SESSION['name'])){
                              <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
           
                              </div>
-                        </li>
+                        </div>
                     
                 </div>
                 </div>
@@ -67,84 +73,122 @@ if (isset($_SESSION['name'])){
     <hr>
 
     <div class="container">
-        <p class="prueba">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta possimus, velit
-            sint ea
-            architecto nisi accusamus consequatur suscipit labore quo modi ullam similique accusantium incidunt adipisci
-            ducimus asperiores porro maiores! Ducimus quidem autem beatae ipsa obcaecati odio tempora omnis corrupti! Magni
-            distinctio quam possimus hic molestias quis ipsa cupiditate fugiat delectus, iusto reprehenderit libero, sunt
-            nisi? Odio nihil voluptas minus aliquam ipsum veritatis adipisci similique dolorum! Quis sequi aliquid
-            deserunt, nam saepe, eos perferendis hic debitis tempora odit suscipit quidem minus quisquam accusamus fuga
-            libero optio? Illum nobis numquam animi architecto, est quam inventore, deserunt facilis ipsa corporis,
-            necessitatibus officia pariatur facere aliquid. Laborum soluta tempora ut. Dolores in id deleniti possimus
-            minus aliquam deserunt odio laboriosam magni. Itaque quia commodi ducimus asperiores eligendi vero adipisci
-            earum corrupti et doloremque, repellendus perferendis, harum sequi beatae ipsa distinctio quisquam facere
-            cumque culpa. In eos velit veniam repellat iusto ad optio expedita fugiat temporibus a, vitae amet quibusdam,
-            rerum, perferendis cupiditate voluptates magni. Cumque quos tenetur assumenda officiis at, maiores, illum
-            explicabo nihil provident, facilis sunt ratione aspernatur repudiandae quis optio numquam nesciunt ipsa eum
-            vel! Consequuntur fugit vel sint dolore, iusto soluta rerum esse quis adipisci quaerat doloribus laudantium
-            maxime modi consectetur est voluptates ab recusandae cumque neque autem temporibus! Rem dolorem optio veritatis
-            molestiae asperiores tenetur soluta earum natus voluptates, magnam exercitationem nesciunt ex sequi
-            reprehenderit autem, officiis ut deleniti enim assumenda adipisci neque. Dolor exercitationem in repudiandae
-            praesentium sit velit dicta soluta reiciendis? Magnam assumenda illum praesentium pariatur exercitationem ea
-            rem atque, a enim quibusdam beatae quasi iure blanditiis optio inventore deleniti velit aperiam nemo aut ut?
-            Nostrum deleniti minus ipsam ex exercitationem nihil. Quae expedita sit, odio alias maxime porro nobis? Dolores
-            perferendis ea deleniti aspernatur accusantium, in officia. Nihil exercitationem quo qui asperiores quam dolor
-            sint culpa voluptatibus quasi mollitia consectetur nesciunt dolores architecto, optio rerum perferendis
-            praesentium. Rerum, architecto fuga quo beatae voluptas veniam eligendi atque possimus aliquam voluptate.
-            Accusantium, sapiente dolores? Quae pariatur numquam illo voluptas maiores, ab inventore atque temporibus cum,
-            alias ex repellendus explicabo ea sint, laborum porro accusamus obcaecati. Nihil hic sequi dolore ea, esse
-            itaque placeat, vitae, ipsum quod voluptatem praesentium. Atque repellat veritatis deleniti facere itaque
-            cumque rerum voluptatem maxime unde quaerat? Eaque, possimus sapiente? Quas praesentium ipsa ut dicta soluta
-            vitae exercitationem obcaecati veniam aliquam voluptate repellendus inventore fugiat impedit quo, officia
-            possimus consectetur, nobis odit, modi eius nam? Ipsam obcaecati quod in maxime ex, voluptatem, consequuntur
-            nam vel magni veritatis voluptate veniam assumenda eligendi laborum! Tenetur autem dolorem, veniam aliquid
-            tempora vero impedit molestias facilis amet sequi et perspiciatis maiores fugiat illum aperiam quasi optio
-            nulla. Assumenda, odio labore? Incidunt eligendi similique, sed omnis maiores iure quia qui dolores. Libero
-            illo amet natus adipisci! Expedita consectetur, necessitatibus recusandae fugiat vel ipsum commodi, soluta hic
-            exercitationem esse in enim maiores explicabo ea quisquam eum eos cum libero? Placeat esse autem itaque error
-            tempore facilis ea velit minus repellendus officiis dolor perspiciatis reprehenderit minima obcaecati,
-            doloremque, veritatis ratione odio natus!</p>
+
+         <!-- Forma 03 -->
+         <div class="container-fluid">
+            <h4 style="padding: 0; margin: 0; color: #CC6600;">Forma 03 Matrícula </h4>
+            <p>Clases Matriculadas</p>
+            <div class="row my-3 my-md-4">
+                <div class="col-12 col-md-6">
+
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <a href="#"><img src="img/foto.jpg" width="90px" alt="Cinque Terre"></a>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <p>
+                                Nombre: Nombre-Alumno
+                            </p>
+                            <p>
+                                Cuenta: 203654124
+                            </p>
+                            <p>
+                                Carrera: INGENIERIA EN SISTEMAS
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+
+                    <p>Centro: Tangamandapio</p>
+                    <p>Año: 2027</p>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Tabla matricula Forma 03 -->
+            <div class="row text-center">
+                <div class="col-12 " style="width: 100%;color: white;background: #006699;">
+                    Clases Matriculadas
+                </div>
+            </div>
+            
+            <!-- /////////////// -->
+            <div>
+                <table class="table table-striped table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th>Cod.</th>
+                            <th>Asignatura</th>
+                            <th>Sección</th>
+                            <th>HI</th>
+                            <th>HF</th>
+                            <th>Dias</th>
+                            <th>Edificio</th>
+                            <th>Aula</th>
+                            <th>UV</th>
+                            <th>OBS</th>
+                            <th>Periodo</th>
+                            <!-- <th>Semana</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Fin tabla 03/////// -->      
+    
     </div>
 
     <!-- footer /////////////////////////////// -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <p style="color:#cccccc;">UNIVERSIDAD NACIONAL AUTÓNOMA DE HONDURAS</p>
-                </div>
-                <div class="col-12 col-md-6" style="text-align: right;">
-                    <a class="icon-facebook-squared" href="#"></a>
-                    <a class="icon-twitter-squared" href="#"></a>
-                    <a class="icon-instagram" href="#"></a>
-                    <a class="icon-gplus-squared" href="#"></a>
-                </div>
-            </div>
-            <hr style="background: white;">
-
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <p style="color:#cccccc;">Bulevar Suyapa, Tegucigalpa, M.D.C, Honduras, Centroamérica</p>
-                    <p style="color:#ffcc00;">info@unah.edu.hn <br>
-                        2216-6100, 2216-5100, 2216-3000, 2216-7000
-                    </p>
-                </div>
-                <div class="col-12 col-md-4" style="text-align: center;">
-                    <img src="img/logo-unah-blanco.png" alt="logo-unah">
-                </div>
-                <div class="col-12 col-md-4" style="text-align: right;">
-                    <button type="button" class="btn btn-secondary contacto">CONTÁCTENOS</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p style="color:#cccccc;">Derechos reservados Universidad Nacional Autónoma de Honduras 2017<br>
-                        Desarrollado por la <span style="color:#ffcc00; border-bottom: 1px dotted #cccccc;;">Dirección
-                            Ejecutiva de Gestión de Tecnología</span></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="text-center" style="width: 100%;position: relative;background: none;border-top:none;"> 
+            <hr style="margin: 0;">
+            <p style="margin: 0;">© Derechos Reservados UNAH 2013</p>
+            <a href="#" title="esta es la matricula" style="margin: 0;">
+                <p style="margin: 0;"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
+            </a>
+        </footer>
     <!-- fin footer /////////////////////////// -->
     <!-- ////////////////////////////////////////// -->
 

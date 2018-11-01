@@ -1,0 +1,15 @@
+.perfil{
+    color: white;
+    background: #F8F9FA;
+    border-radius: 0;
+}
+
+.perfil:hover{
+    background: #F8F9FA;
+}
+
+.perfil:focus{
+    background: #F8F9FA;
+    outline: 0;
+    box-shadow: none;
+}
