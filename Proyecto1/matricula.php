@@ -1,9 +1,9 @@
 <?php
 session_start();
 //si hay una sesión
-if (isset($_SESSION['name'])){
+if (isset($_SESSION['name'])) {
     //se muestra el contenido de la página web
-?>
+    ?>
 <!DOCTYPE html>
 <html>
 
@@ -47,7 +47,7 @@ if (isset($_SESSION['name'])){
                         <div class="dropdown" style="margin-left:0; ">
                             <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
                                 <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
-                                <?php print $_SESSION['name'];?>
+                                <?php print $_SESSION['name']; ?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                              
@@ -66,15 +66,10 @@ if (isset($_SESSION['name'])){
     </div>
     <!-- fin-Elvin//////////// -->
     <div class="container">
-    <br>
-        <br>
-        <br>
-        <br>
-        <br>
         
 <!-- Matrícula/////////////////// -->
         <!-- adicionar////// -->
-        <div class="container-fluid border">
+        <div class="container-fluid border my-5" style="padding: 5px;">
             <h3 style="color: rgb(131, 2, 2);">Matrícula</h3>
             <div class="row">
                 <div class="col-12">
@@ -117,6 +112,17 @@ if (isset($_SESSION['name'])){
             </div>
             <div class="row">
                 <div class="col-12">
+                    <!-- si la clase tiene laboratorio -->
+                    <div class="container-fluid d-none">
+                    <div class="form-group">
+                        <label for="sel3" class="encabezado-tabla my-2">Sección Laboratorio:</label>
+                        <select class="form-control" id="sel3">
+                            <option>0800 Lu</option>
+                            <option>1000 Mi</option>
+                        </select>
+                    </div> 
+                    </div>
+                    <!-- ///////////////////////////// -->
                    <button type="button" class="btn btn-danger" style="margin-bottom: 1em;">Matricular Asignatura</button>
                 </div>
             </div>
@@ -154,9 +160,10 @@ if (isset($_SESSION['name'])){
 
 </html>
 <?php
+
 }//si no hay sesión
-else{
+else {
     //se redirecciona
-    header ('location: ./');
+    header('location: ./');
 }
 ?>
