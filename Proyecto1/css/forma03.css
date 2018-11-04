@@ -12,3 +12,7 @@
     color: white;
     background-color: #006699;
 }
+
+.forma03-tabla th, .forma03-tabla td{
+    padding: 0.50rem;
+}

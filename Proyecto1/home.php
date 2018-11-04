@@ -73,17 +73,14 @@ if (isset($_SESSION['name'])){
     <hr>
 
     <div class="container">
-
-         <!-- Forma 03 -->
-         <div class="container-fluid">
-            <h4 style="padding: 0; margin: 0; color: #CC6600;">Forma 03 Matrícula </h4>
-            <p>Clases Matriculadas</p>
+        <!-- Forma 03 -->
+        <div class="container-fluid forma03-encabezado">
+            <h4>Forma 03 Matrícula </h4>
             <div class="row my-3 my-md-4">
                 <div class="col-12 col-md-6">
-
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <a href="#"><img src="img/foto.jpg" width="90px" alt="Cinque Terre"></a>
+                            <a href="#"><img src="img/foto.jpg" alt="No Perfil"></a>
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
@@ -104,17 +101,16 @@ if (isset($_SESSION['name'])){
                     <p>Año: 2027</p>
                 </div>
             </div>
+        </div>
 
-            <br>
-
-            <!-- Tabla matricula Forma 03 -->
-            <div class="row text-center">
-                <div class="col-12 " style="width: 100%;color: white;background: #006699;">
+        <!-- Tabla matricula Forma 03 -->
+        <div class="container-fluid forma03-tabla">
+            <div class="text-center">
+                <div class=" encabezado">
                     Clases Matriculadas
                 </div>
             </div>
-            
-            <!-- /////////////// -->
+
             <div>
                 <table class="table table-striped table-responsive-lg">
                     <thead>
@@ -135,50 +131,97 @@ if (isset($_SESSION['name'])){
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
+                            <td>MM110</td>
+                            <td>Matemática 1</td>
+                            <td>0700</td>
+                            <td>0700</td>
+                            <td>0800</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>F1</td>
+                            <td>404</td>
+                            <td>5</td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>1</td>
                         </tr>
                         <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
+                            <td>MM111</td>
+                            <td>Geometría y Trigonometría</td>
+                            <td>1400</td>
+                            <td>1400</td>
+                            <td>1500</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>D1</td>
+                            <td>303</td>
+                            <td>5</td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>1</td>
                         </tr>
                         <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
+                            <td>MM202</td>
+                            <td>Cálculo 2</td>
+                            <td>1700</td>
+                            <td>1700</td>
+                            <td>1800</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>F1</td>
+                            <td>103</td>
+                            <td>5</td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>1</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <!-- Fin tabla 03/////// -->      
-    
+        <!-- Fin tabla 03/////// -->
+
+        <!-- Laboratorios Matriculados -->
+        <div class="container-fluid forma03-tabla my-5">
+            <div class="text-center">
+                <div class=" encabezado">
+                    Laboratorios Matriculados
+                </div>
+            </div>
+
+            <div>
+                <table class="table table-striped table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th>Cod.</th>
+                            <th>Asignatura</th>
+                            <th>Sección</th>
+                            <th>HI</th>
+                            <th>HF</th>
+                            <th>Dias</th>
+                            <th>Edificio</th>
+                            <th>Aula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MM111</td>
+                            <td>Geometría y Trigonometría</td>
+                            <td>1400</td>
+                            <td>1400</td>
+                            <td>1500</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>MM202</td>
+                            <td>Cálculo 2</td>
+                            <td>1700</td>
+                            <td>1700</td>
+                            <td>1800</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>5</td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     <!-- footer /////////////////////////////// -->

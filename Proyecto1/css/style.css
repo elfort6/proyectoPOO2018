@@ -1,16 +1,18 @@
+@import url("forma03.css");
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.encabezado {
+/* .encabezado {
     background: linear-gradient(135deg, #002484 0%, rgba(229, 252, 255, 1) 46%, rgba(255, 255, 255, 1) 52%, rgba(229, 252, 255, 1) 57%, #002484 100%);
     padding: 5px;
     padding-top: 20px;
     margin: 0;
     border-radius: 0;
-}
+} */
 
 .opciones:hover{
     background: grey;
