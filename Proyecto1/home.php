@@ -1,7 +1,7 @@
 <?php
 session_start();
 //si hay una sesión
-if (isset($_SESSION['name'])){
+if (isset($_SESSION['name'])) {
     //se muestra el contenido de la página web
 ?>
 <!DOCTYPE html>
@@ -20,55 +20,53 @@ if (isset($_SESSION['name'])){
 
 <body>
 
-  <!-- Elvin /////////////// -->
-  <div class="container-fluid">
-        <header >
+    <!-- Elvin /////////////// -->
+    <div class="container-fluid">
+        <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="home.php">
-                    
-                    <img src="img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
-                    
+
+                        <img src="img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
+
                     </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
-                        <li class="nav-item"><a class="nav-link" href="facultades.html">solicitudes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
-                        
-                    </ul>
-                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
+                            <li class="nav-item"><a class="nav-link" href="facultades.html">solicitudes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
+
+                        </ul>
+
 
                         <div class="dropdown" style="margin-left:0; ">
                             <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
                                 <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
-                                <?php print $_SESSION['name'];?>
+                                <?php print $_SESSION['name']; ?>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                             
-                             <a class="dropdown-item" href="#">configuraciones</a>
-                             
-                             <div class="dropdown-divider"></div>
-                             <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
-          
-                             </div>
+
+                                <a class="dropdown-item" href="#">configuraciones</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
+                            </div>
                         </div>
-                    
-                </div>
+                    </div>
                 </div>
             </nav>
         </header>
     </div>
     <!-- fin-Elvin//////////// -->
     <article style="text-align: center;">
-    <h1>¡Bienvenido <?php print $_SESSION['name'];?>!</h1>
-</article>
-    
-    
+        <h1>¡Bienvenido <?php print $_SESSION['name']; ?>!</h1>
+    </article>
+
+
 
     <hr>
 
@@ -96,7 +94,6 @@ if (isset($_SESSION['name'])){
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-
                     <p>Centro: Tangamandapio</p>
                     <p>Año: 2027</p>
                 </div>
@@ -225,13 +222,13 @@ if (isset($_SESSION['name'])){
     </div>
 
     <!-- footer /////////////////////////////// -->
-    <footer class="text-center" style="width: 100%;position: relative;background: none;border-top:none;"> 
-            <hr style="margin: 0;">
-            <p style="margin: 0;">© Derechos Reservados UNAH 2013</p>
-            <a href="#" title="esta es la matricula" style="margin: 0;">
-                <p style="margin: 0;"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
-            </a>
-        </footer>
+    <footer class="text-center" style="width: 100%;position: relative;background: none;border-top:none;">
+        <hr style="margin: 0;">
+        <p style="margin: 0;">© Derechos Reservados UNAH 2013</p>
+        <a href="#" title="esta es la matricula" style="margin: 0;">
+            <p style="margin: 0;"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
+        </a>
+    </footer>
     <!-- fin footer /////////////////////////// -->
     <!-- ////////////////////////////////////////// -->
 
@@ -243,8 +240,7 @@ if (isset($_SESSION['name'])){
 </html>
 <?php
 }//si no hay sesión
-else{
+else {
     //se redirecciona
-    header ('location: ./');
+    header('location: ./');
 }
-?>
