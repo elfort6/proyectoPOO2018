@@ -6,14 +6,6 @@
     box-sizing: border-box;
 }
 
-/* .encabezado {
-    background: linear-gradient(135deg, #002484 0%, rgba(229, 252, 255, 1) 46%, rgba(255, 255, 255, 1) 52%, rgba(229, 252, 255, 1) 57%, #002484 100%);
-    padding: 5px;
-    padding-top: 20px;
-    margin: 0;
-    border-radius: 0;
-} */
-
 .opciones:hover{
     background: grey;
 }
@@ -166,3 +158,22 @@ footer .fondo{
     box-shadow: none;
 }
 /* /////////// */
+
+.boton-entrar{
+    background: #002484;
+    color: #F8F9FA;
+    font-size: 1.2em;
+}
+
+.boton-entrar:hover{
+    background: #1d50db;
+}
+
+.boton-entrar:active{
+    background: #F8F9FA;
+    color: #000000;
+}
+
+.btn-danger:focus{
+    box-shadow: none;
+}

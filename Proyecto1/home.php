@@ -50,7 +50,9 @@ if (isset($_SESSION['name'])) {
                             </button>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="#">configuraciones</a>
+                                <a class="dropdown-item" href="#">Configuraciones</a>
+
+                                <a class="dropdown-item" href="#">Correo Institucional</a>
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
