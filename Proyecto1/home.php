@@ -20,7 +20,6 @@ if (isset($_SESSION['name'])) {
 
 <body>
 
-    <!-- Elvin /////////////// -->
     <div class="container-fluid">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,9 +34,9 @@ if (isset($_SESSION['name'])) {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
-                            <li class="nav-item"><a class="nav-link" href="facultades.html">solicitudes</a></li>
+                        <ul class="navbar-nav mr-auto" id="enlaces-menu">
+                            <li class="nav-item"><a class="nav-link" href="matricula.html">Matricula</a></li>
+                            <li class="nav-item"><a class="nav-link" href="solicitudes.php">solicitudes</a></li>
                             <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
 
                         </ul>
@@ -63,7 +62,8 @@ if (isset($_SESSION['name'])) {
             </nav>
         </header>
     </div>
-    <!-- fin-Elvin//////////// -->
+
+
     <article style="text-align: center;">
         <h1>¡Bienvenido <?php print $_SESSION['name']; ?>!</h1>
     </article>
@@ -72,7 +72,7 @@ if (isset($_SESSION['name'])) {
 
     <hr>
 
-    <div class="container">
+    <div class="container" id="CONTENIDO">
         <!-- Forma 03 -->
         <div class="container-fluid forma03-encabezado">
             <h4>Forma 03 Matrícula </h4>
@@ -234,9 +234,24 @@ if (isset($_SESSION['name'])) {
     <!-- fin footer /////////////////////////// -->
     <!-- ////////////////////////////////////////// -->
 
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#enlaces-menu a").click(function() {
+
+                var url = $(this).attr("href");
+                //alert(url);
+
+                $("#CONTENIDO").load(url + " #contenido-pagina");
+
+                return false;
+            });
+        });
+    </script>
+
 </body>
 
 </html>

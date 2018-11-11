@@ -19,57 +19,8 @@ if (isset($_SESSION['name'])) {
 </head>
 
 <body>
-
-  <!-- Elvin /////////////// -->
-  <div class="container-fluid">
-      
-        <header >
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.php">
-                    
-                    <img src="img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
-                    
-                    </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link active" href="centros-regionales.html">Matricula</a></li>
-                        <li class="nav-item"><a class="nav-link" href="facultades.html">solicitudes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
-                        
-                    </ul>
-                    
-
-                        <div class="dropdown" style="margin-left:0; ">
-                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
-                                <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
-                                <?php print $_SESSION['name'];?>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                             
-                             <a class="dropdown-item" href="#">configuraciones</a>
-
-                             <a class="dropdown-item" href="#">Correo Institucional</a>
-                             
-                             <div class="dropdown-divider"></div>
-                             <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
-          
-                             </div>
-                        </div>
-                    
-                </div>
-                </div>
-            </nav>
-        </header>
-    </div>
-    <!-- fin-Elvin//////////// -->
-    <div class="container">
-        
-<!-- Matrícula/////////////////// -->
+    <div class="container" id="contenido-pagina">
+        <!-- Matrícula/////////////////// -->
         <!-- adicionar////// -->
         <div class="container-fluid border my-5" style="padding: 5px;">
             <h3 style="color: rgb(131, 2, 2);">Matrícula</h3>
@@ -114,7 +65,7 @@ if (isset($_SESSION['name'])) {
             </div>
             <div class="row">
                 <div class="col-12">
-                   <button type="button" class="btn btn-danger" style="margin-bottom: 1em;">Matricular Asignatura</button>
+                    <button type="button" class="btn btn-danger" style="margin-bottom: 1em;">Matricular Asignatura</button>
                 </div>
             </div>
         </div>
@@ -154,7 +105,7 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn cancela" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                         <tr>
                             <td>MM111</td>
@@ -165,7 +116,7 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                         <tr>
                             <td>MM202</td>
@@ -176,13 +127,12 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <!-- fin asignaturas-añadidas -->
 
         <!-- Asignaturas en lista de espera -->
         <div class="container-fluid forma03-tabla my-5">
@@ -218,7 +168,7 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px;background:none;">Cancelar</button></td>
                         </tr>
                         <tr>
                             <td>MM202</td>
@@ -229,7 +179,7 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -270,7 +220,7 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                         <tr>
                             <td>MM202</td>
@@ -281,39 +231,19 @@ if (isset($_SESSION['name'])) {
                             <td>LuMaMiJuVi</td>
                             <td>5</td>
                             <td>1</td>
-                            <td><button type="button" class="btn btn-danger" style="padding: 1px;">CANCELAR</button></td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
-    
-    
-
-    <!-- footer /////////////////////////////// -->
-    <footer class="text-center" style="width: 100%;position: relative;background: none;border-top:none;"> 
-            <hr style="margin: 0;">
-            <p style="margin: 0;">© Derechos Reservados UNAH 2013</p>
-            <a href="#" title="esta es la matricula" style="margin: 0;">
-                <p style="margin: 0;"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
-            </a>
-        </footer>
-    <!-- fin footer /////////////////////////// -->
-    <!-- ////////////////////////////////////////// -->
-
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
 <?php
-
 }//si no hay sesión
 else {
     //se redirecciona
     header('location: ./');
 }
-?>
