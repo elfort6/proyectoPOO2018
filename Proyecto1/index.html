@@ -1,9 +1,3 @@
-<?php
-session_start();
-//si hay una sesión
-if (isset($_SESSION['name'])==false) {
-    //se muestra el contenido de la página web
-?>
 <!DOCTYPE html>
 <html>
 
@@ -24,7 +18,7 @@ if (isset($_SESSION['name'])==false) {
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="index.php"><img src="img/logo-unah.png" alt="la imagen se mamo" width="135"></a>
+                <a class="navbar-brand" href="index.html"><img src="img/logo-unah.png" alt="la imagen se mamo" width="135"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,7 +51,7 @@ if (isset($_SESSION['name'])==false) {
                     <h2>Iniciar sesión</h2>
                 </div>
                 <div class="modal-body">
-                    <form action="archivo_destino.php" method="post" enctype="application/x-www-form-urlencoded">
+                    <form action="php/archivo_destino.php" method="post" enctype="application/x-www-form-urlencoded">
                         <div class="form-group">
                             <label for="control1_nombre">Usuario</label>
                             <input type="text" name="datos_introducidos_usuario" class="form-control" id="control1_nombre"
@@ -247,14 +241,34 @@ if (isset($_SESSION['name'])==false) {
                 return false;
             });
         });
+
+        (function() {
+        $.ajax({
+                url:"php/session.php",
+                method:"GET",
+                data: "{}",
+                dataType: "text",
+                success:function(respuesta){
+                     console.log("El servidor DICE: "+respuesta);
+                     if(respuesta!=''){
+                         window.location.replace("home.html");
+                      }
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+        })();
+       
+       
+
+            
+
+
     </script>
 
 </body>
 
 </html>
-<?php
-}//si no hay sesión
-else {
-    //se redirecciona
-    header('location: home.php');
-}
+
+

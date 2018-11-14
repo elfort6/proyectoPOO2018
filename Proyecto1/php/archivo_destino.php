@@ -20,7 +20,7 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
         if ($verificar_contraseña){
             //se asigna la sesión y redirecciona
             $_SESSION['name']=$nombre_de_usuario;
-            header ('location: home.php');
+            header ('location: ../home.html');
         }//si la contraseña es incorrecta
         else{
            # header ('location: ./');

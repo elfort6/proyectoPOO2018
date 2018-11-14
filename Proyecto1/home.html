@@ -1,9 +1,3 @@
-<?php
-session_start();
-//si hay una sesión
-if (isset($_SESSION['name'])) {
-    //se muestra el contenido de la página web
-?>
 <!DOCTYPE html>
 <html>
 
@@ -16,6 +10,33 @@ if (isset($_SESSION['name'])) {
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        (function() {
+        $.ajax({
+                url:"php/session.php",
+                method:"GET",
+                data: "{}", 
+                dataType: "text",
+                success:function(respuesta){
+                     console.log("El servidor DICE: "+respuesta);
+                     if(respuesta==''){
+                         window.location.replace("index.html");
+                      }else{
+                        $('.usu').html(respuesta); 
+                      }
+                      
+                      
+                      
+                },
+                error:function(err){
+                    console.log(err);
+                }
+            });
+        })();
+       
+    </script>
+
 </head>
 
 <body>
@@ -24,7 +45,7 @@ if (isset($_SESSION['name'])) {
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="home.php">
+                    <a class="navbar-brand" href="home.html">
 
                         <img src="img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
 
@@ -35,17 +56,16 @@ if (isset($_SESSION['name'])) {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto" id="enlaces-menu">
-                            <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
+                            <li class="nav-item"><a class="nav-link" href="matricula.html">Matricula</a></li>
                             <li class="nav-item"><a class="nav-link" href="solicitudes.html">solicitudes</a></li>
                             <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
-
                         </ul>
 
 
                         <div class="dropdown" style="margin-left:0; ">
                             <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
-                                <img src="img/foto.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
-                                <?php print $_SESSION['name']; ?>
+                                <img src="img/perfil-alumno.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
+                                <span class="usu"></span>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
@@ -54,7 +74,7 @@ if (isset($_SESSION['name'])) {
                                 <a class="dropdown-item" href="#">Correo Institucional</a>
 
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="cerrar_sesion.php">salir</a>
+                                <a class="dropdown-item" href="php/cerrar_sesion.php">salir</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +85,7 @@ if (isset($_SESSION['name'])) {
 
 
     <article style="text-align: center;">
-        <h1>¡Bienvenido <?php print $_SESSION['name']; ?>!</h1>
+        <h1>¡Bienvenido <span class="usu"></span>!</h1>
     </article>
 
 
@@ -80,7 +100,7 @@ if (isset($_SESSION['name'])) {
                 <div class="col-12 col-md-6">
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <a href="#"><img src="img/foto.jpg" alt="No Perfil"></a>
+                            <a href="#"><img src="img/perfil-alumno.jpg" alt="No Perfil"></a>
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
@@ -234,7 +254,7 @@ if (isset($_SESSION['name'])) {
     <!-- fin footer /////////////////////////// -->
     <!-- ////////////////////////////////////////// -->
 
-    <script src="js/jquery-3.3.1.js"></script>
+    
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
@@ -250,14 +270,9 @@ if (isset($_SESSION['name'])) {
                 return false;
             });
         });
+       
     </script>
 
 </body>
 
 </html>
-<?php
-}//si no hay sesión
-else {
-    //se redirecciona
-    header('location: ./');
-}
