@@ -5,36 +5,37 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Principal</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="css/fontello.css" /><!-- para el icono del menu -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.js"></script>
+    
     <script>
-        (function() {
-        $.ajax({
-                url:"php/session.php",
-                method:"GET",
-                data: "{}", 
+        (function () {
+            $.ajax({
+                url: "php/session.php",
+                method: "GET",
+                data: "{}",
                 dataType: "text",
-                success:function(respuesta){
-                     console.log("El servidor DICE: "+respuesta);
-                     if(respuesta==''){
-                         window.location.replace("index.html");
-                      }else{
-                        $('.usu').html(respuesta); 
-                      }
-                      
-                      
-                      
+                success: function (respuesta) {
+                    console.log("El servidor DICE: " + respuesta);
+                    if (respuesta == '') {
+                        window.location.replace("index.html");
+                    } else {
+                        $('.usu').html(respuesta);
+                    }
+
                 },
-                error:function(err){
+                error: function (err) {
                     console.log(err);
                 }
             });
         })();
-       
+
     </script>
 
 </head>
@@ -69,7 +70,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" href="#">Configuraciones</a>
+                                <a class="dropdown-item" id="cambiar-perfil" href="modal-perfil/cambiar-perfil.php">Configuraciones</a>
 
                                 <a class="dropdown-item" href="#">Correo Institucional</a>
 
@@ -89,7 +90,6 @@
     </article>
 
 
-
     <hr>
 
     <div class="container" id="CONTENIDO">
@@ -100,7 +100,7 @@
                 <div class="col-12 col-md-6">
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <a href="#"><img src="img/perfil-alumno.jpg" alt="No Perfil"></a>
+                            <img src="img/perfil-alumno.jpg" alt="No Perfil">
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
@@ -254,13 +254,13 @@
     <!-- fin footer /////////////////////////// -->
     <!-- ////////////////////////////////////////// -->
 
-    
+
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $("#enlaces-menu a").click(function() {
+        $(document).ready(function () {
+            $("#enlaces-menu a").click(function () {
 
                 var url = $(this).attr("href");
                 //alert(url);
@@ -270,7 +270,6 @@
                 return false;
             });
         });
-       
     </script>
 
 </body>
