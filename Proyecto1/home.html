@@ -7,13 +7,13 @@
     <title>Principal</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="css/fontello.css" /><!-- para el icono del menu -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.js"></script>
-    
+
     <script>
         (function () {
             $.ajax({
@@ -65,12 +65,12 @@
 
                         <div class="dropdown" style="margin-left:0; ">
                             <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
-                                <img src="img/perfil-alumno.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
+                                <img src="perfiles-usuarios/perfil-numerocuenta.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
                                 <span class="usu"></span>
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" id="cambiar-perfil" aria-labelledby="navbarDropdown">
 
-                                <a class="dropdown-item" id="cambiar-perfil" href="modal-perfil/cambiar-perfil.php">Configuraciones</a>
+                                <a class="dropdown-item" href="configuracion.html">Configuraciones</a>
 
                                 <a class="dropdown-item" href="#">Correo Institucional</a>
 
@@ -92,7 +92,40 @@
 
     <hr>
 
-    <div class="container" id="CONTENIDO">
+ <!--    <div class="container" id="contenido-pagina">
+            <h2>¿Desea cambiar su imagen de perfil?</h2>
+            <p></p>
+        
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Buscar Archivo
+            </button>
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+        
+                        <div class="modal-header">
+                            <h4 class="modal-title">Elija una imagen</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+        
+                        <div class="modal-body">
+                            <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                                <input type="file" name="file" id="file" required />
+                                <input type="submit" value="Subir" class="submit" />
+                            </form>
+                            <div id="respuesta"></div>
+                        </div>
+        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ -->
+    
+ <div class="container" id="CONTENIDO">
         <!-- Forma 03 -->
         <div class="container-fluid forma03-encabezado">
             <h4>Forma 03 Matrícula </h4>
@@ -100,7 +133,7 @@
                 <div class="col-12 col-md-6">
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <img src="img/perfil-alumno.jpg" alt="No Perfil">
+                            <img src="perfiles-usuarios/perfil-numerocuenta.jpg" alt="No Perfil">
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
@@ -257,6 +290,10 @@
 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
+
+    <!-- esta es la funcionalidad de la pagina -->
+    <script id="script-pagina"></script>
 
     <script>
         $(document).ready(function () {
@@ -267,6 +304,17 @@
 
                 $("#CONTENIDO").load(url + " #contenido-pagina");
 
+                return false;
+            });
+
+            $("#cambiar-perfil a").click(function () {
+
+                var url = $(this).attr("href");
+
+                $("#CONTENIDO").load(url + " #contenido-pagina");
+
+                $("#script-pagina").load("js/perfiles.js");
+                console.log("Se cargó el html");
                 return false;
             });
         });
