@@ -1,2 +1,5 @@
-[{"cuenta":"20161002569", "contraseña":"123","tipo-usuario":"1"},
-{"cuenta":"666", "contraseña":"123","tipo-usuario":"2"}]
+{"cuenta":"2134","contraseña":"$2y$10$bkFOszJ1YS8bttENu9Li8u/wNGRGdF/cdC8p7gkTq865vXSV48I0.","tipo":"1"}
+{"cuenta":"2134","contraseña":"$2y$10$60nmrGK8WAOZd2gL7KNYpO1WKUSWI6.2OEKOdtE6HYOzJp8glz0mG","tipo":"1"}
+{"cuenta":"2134","contraseña":"$2y$10$SqyrtOnPgEWurUHoDRH.peCyTfSCcqCtTlJf1o7YI5ERmgV197076","tipo":"1"}
+{"cuenta":"2134","contraseña":"$2y$10$UmOnA5qXkjZZziLDdW.hA.GDu1VIyEmCnoFTc3DjHf/aqzdiKbe3u","tipo":"1"}
+{"cuenta":"12345","contraseña":"$2y$10$jvT84vzGKqOhtj1uJWofMejQqjPg13QYmUA3Od.dPZtoNympQfKsW","tipo":"1"}
