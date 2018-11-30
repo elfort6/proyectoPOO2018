@@ -13,34 +13,35 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.js"></script>
-
     <script>
-        (function () {
-            $.ajax({
-                url: "php/session.php",
-                method: "GET",
-                data: "{}",
-                dataType: "text",
-                success: function (respuesta) {
-                    console.log("El servidor DICE: " + respuesta);
-                    if (respuesta == '') {
-                        window.location.replace("index.html");
-                    } else {
-                        $('.usu').html(respuesta);
+            (function () {
+                $.ajax({
+                    url: "php/session.php",
+                    method: "GET",
+                    data: "{}",
+                    dataType: "text",
+                    success: function (respuesta) {
+                        console.log("El servidor DICE: " + respuesta);
+                        if (respuesta == '') {
+                            window.location.replace("index.html");
+                        } else {
+                            $('.usu').html(respuesta);
+                        }
+    
+                    },
+                    error: function (err) {
+                        console.log(err);
                     }
-
-                },
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        })();
-
-    </script>
+                });
+            })();
+    
+        </script>
+  
 
 </head>
 
 <body>
+        
 
     <div class="container-fluid">
         <header>
@@ -139,7 +140,7 @@
                             <p>
                                 Nombre: Nombre-Alumno
                             </p>
-                            <p>
+                            <p class="cue">
                                 Cuenta: 203654124
                             </p>
                             <p>

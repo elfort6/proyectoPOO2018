@@ -2,40 +2,41 @@
 //se lee la cookie de sesion
 session_start();
 //se establece una conexión a la base de datos
-
+include 'conexion.php';
 //se validarán los campos si la sesion aún no está abierta
-if (empty($_SESSION) and isset($_POST['cuenta'])){
+if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
     //se escaparán caracteres peligrosos
-    $cuenta = $_POST['cuenta'];
-    $clave = $_POST['contraseña'];
-    $archivo = fopen("../dbjson/usuarios.json","r");
-    while(($linea=fgets($archivo))){
-        //Cada linea es texto en formato JSON
-        $registro = json_decode($linea,true);
-        //print('contraseña mal'.$registro["cuenta"].' == '.$cuenta );
-        if ($registro["cuenta"] ==$cuenta ){
-            $verificar_contraseña=password_verify($clave,$registro['contraseña']);
-
-            if ($verificar_contraseña){
-                //se asigna la sesión y redirecciona
-                $_SESSION['name']=$_POST['cuenta'];
-                header ('location: ../home.html');
-            }//si la contraseña es incorrecta
-            else{
-               # header ('location: ./');
-              print('contraseña mal'. $verificar_contraseña);
-            }
-            
-
-            exit();
-        }else{//si el usuario no está registrado
-            # header ('location: ./');
-            print('usuario mal');
-         }
+    $nombre_de_usuario=mysqli_real_escape_string($conexion,$_POST['datos_introducidos_usuario']);
+    $contraseña_introducida=$_POST['datos_introducidos_contraseña'];
+    //se hará la consulta a la base de datos
+    $consulta='select * from usuarios where cuenta="'.$nombre_de_usuario.'"';
+    //si hubo un resultado
+    if ($ejecución_de_la_consulta=$conexion->query($consulta)){
+        //se obtiene la contraseña registrada
+        $contraseña_guardada=$ejecución_de_la_consulta->fetch_assoc();
+        //se compara la contraseña
+        $verificar_contraseña=password_verify($contraseña_introducida,$contraseña_guardada['clave']);
+        //si el resultado de la comparación ha sido verdadero
+        if ($verificar_contraseña){
+            //se asigna la sesión y redirecciona
+            $consultaest='select * from estudiantes where cuenta="'.$nombre_de_usuario.'"';
+            $ejecución_de_la_consultaest=$conexion->query($consultaest);
+            $datos=$ejecución_de_la_consultaest->fetch_assoc();
+            $info = $datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido'];
+            $_SESSION['name']=$info;
+            $_SESSION['cuenta']=$nombre_de_usuario;
+            //print('nombre: '.$datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido']);
+            header ('location: ../home.html');
+        }//si la contraseña es incorrecta
+        else{
+           # header ('location: ./');
+           print('contraseña mal');
+        }
+    }//si el usuario no está registrado
+    else{
+       # header ('location: ./');
+       print('usuario mal');
     }
-    fclose($archivo);
-    echo "El usuario no existe";
- 
 }//si hay una sesion abierta o no se enviaron datos
 else{
     #header ('location: ./');
