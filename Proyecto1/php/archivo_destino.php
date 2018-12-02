@@ -26,7 +26,24 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
             $_SESSION['name']=$info;
             $_SESSION['cuenta']=$nombre_de_usuario;
             //print('nombre: '.$datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido']);
-            header ('location: ../home.html');
+           if($contraseña_guardada['nivel']==1){
+            header ('location: ../estudiantes/');
+            $_SESSION['lvl']=1;
+           }else{
+            if($contraseña_guardada['nivel']==2){
+                header ('location: ../docentes/');
+                $_SESSION['lvl']=2;
+            }else{
+                if($contraseña_guardada['nivel']==3){
+                    header ('location: ../registro/');
+                    $_SESSION['lvl']=3;
+                }else{
+                    
+                }
+            }
+           }
+           
+            
         }//si la contraseña es incorrecta
         else{
            # header ('location: ./');

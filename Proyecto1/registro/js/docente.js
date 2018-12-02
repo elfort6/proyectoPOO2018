@@ -21,7 +21,7 @@
                     $.ajax({
                         url: "php/registrar.php?opcion=2",
                         method: "POST",
-                        dataType: "json",
+                        dataType: "text",
                         data: parametros,
                         success: function (respuesta) {
                             console.log(respuesta);

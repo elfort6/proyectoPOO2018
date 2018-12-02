@@ -14,9 +14,34 @@
 
 <body>
 
-    <?php
-        include("header.html");
-    ?>
+    <!--/////////////// -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo-unah.png" alt="la imagen se mamo" width="135"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto" id="enlaces-menu">
+
+                        <li class="nav-item"><a class="nav-link" href="centros-regionales.html">Centros Regionales</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="facultades.html">Facultades</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="otra-opcion.html">otra opcion</a></li>
+
+                    </ul>
+                    <!--a class="btn1 btn-outline-login" href="login.html " role="button"> Ingresar </a-->
+                    <a class="btn1 btn-outline-login" href="#" data-toggle="modal" data-target=".bs-example-modal-sm"
+                        role="button">Ingresar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--//////////// -->
+
 
     <!--modal para iniciar sesión-->
     <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
@@ -157,50 +182,93 @@
         </div>
     </div>
 
-    <?php
-        include("footer.html");
-    ?>
+
+    <!-- footer /////////////////////////////// -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p style="color:#cccccc;">UNIVERSIDAD NACIONAL AUTÓNOMA DE HONDURAS</p>
+                </div>
+                <div class="col-12 col-md-6" style="text-align: right;">
+                    <a class="icon-facebook-squared" href="#"></a>
+                    <a class="icon-twitter-squared" href="#"></a>
+                    <a class="icon-instagram" href="#"></a>
+                    <a class="icon-gplus-squared" href="#"></a>
+                </div>
+            </div>
+            <hr style="background: white;">
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <p style="color:#cccccc;">Bulevar Suyapa, Tegucigalpa, M.D.C, Honduras, Centroamérica</p>
+                    <p style="color:#ffcc00;">info@unah.edu.hn <br>
+                        2216-6100, 2216-5100, 2216-3000, 2216-7000
+                    </p>
+                </div>
+                <div class="col-12 col-md-4" style="text-align: center;">
+                    <img src="img/logo-unah-blanco.png" alt="logo-unah">
+                </div>
+                <div class="col-12 col-md-4" style="text-align: right;">
+                    <button type="button" class="btn btn-secondary contacto">CONTÁCTENOS</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p style="color:#cccccc;">Derechos reservados Universidad Nacional Autónoma de Honduras 2017<br>
+                        Desarrollado por la <span style="color:#ffcc00; border-bottom: 1px dotted #cccccc;;">Dirección
+                            Ejecutiva de Gestión de Tecnología</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- fin footer /////////////////////////// -->
+    <!-- ////////////////////////////////////////// -->
 
     <script src="js/jquery-3.3.1.js"></script>
+    <!-- <script src="js/jquery-1.6.3.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function() {
-            $("header").html("header.html");
-            $("footer").html("footer.html");
-
             $("#enlaces-menu a").click(function() {
 
-                alert("si funciona");
+                var url = $(this).attr("href");
 
-                /* var url = $(this).attr("href");
-
-                $("#CONTENIDO").load(url + " #contenido-pagina"); */
+                $("#CONTENIDO").load(url + " #contenido-pagina");
 
                 return false;
             });
         });
 
-        (function() {
-            $.ajax({
-                url: "php/session.php",
-                method: "GET",
+        /* (function() {
+        $.ajax({
+                url:"php/session.php",
+                method:"GET",
                 data: "{}",
                 dataType: "text",
-                success: function(respuesta) {
-                    console.log("El servidor DICE: " + respuesta);
-                    if (respuesta != '') {
-                        window.location.replace("home.html");
-                    }
+                success:function(respuesta){
+                     console.log("El servidor DICE: "+respuesta);
+                     if(respuesta!=''){
+                         window.location.replace("estudiantes/");
+                      }
                 },
-                error: function(err) {
+                error:function(err){
                     console.log(err);
                 }
             });
-        })();
+        })(); */
+       
+       
+
+            
+
+
     </script>
 
 </body>
 
 </html>
+
+
