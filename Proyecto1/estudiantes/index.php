@@ -8,126 +8,50 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../css/fontello.css" /><!-- para el icono del menu -->
+   
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/jquery-3.3.1.js"></script>
-    <script>
-            (function () {
-                $.ajax({
-                    url: "../php/session.php",
-                    method: "GET",
-                    data: "{}",
-                    dataType: "text",
-                    success: function (respuesta) {
-                        console.log("El servidor DICE: " + respuesta);
-                        if (respuesta == '') {
-                            window.location.replace("../index.html");
-                        } else {
-                            $('.usu').html(respuesta);
-                        }
     
-                    },
-                    error: function (err) {
-                        console.log(err);
+    <!-- <script>
+        (function () {
+            $.ajax({
+                url: "../php/session.php",
+                method: "GET",
+                data: "{}",
+                dataType: "text",
+                success: function (respuesta) {
+                    console.log("El servidor DICE: " + respuesta);
+                    if (respuesta == '') {
+                        window.location.replace("../index.html");
+                    } else {
+                        $('.usu').html(respuesta);
                     }
-                });
-            })();
-    
-        </script>
-  
 
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            });
+        })();
+    </script> -->
 </head>
 
 <body>
-        
-
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-
-                        <img src="../img/logo-unah.png" alt="la imagen se mamo" width="110" height="60">
-
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto" id="enlaces-menu">
-                            <li class="nav-item"><a class="nav-link" href="matricula.html">Matricula</a></li>
-                            <li class="nav-item"><a class="nav-link" href="solicitudes.html">solicitudes</a></li>
-                            <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
-                        </ul>
 
 
-                        <div class="dropdown" style="margin-left:0; ">
-                            <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
-                                <img src="../perfiles-usuarios/perfil-numerocuenta.jpg" class="rounded-circle foto-perfil " width="50px" alt="Cinque Terre">
-                                <span class="usu"></span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div id="cambiar-perfil">
-                                    <a class="dropdown-item" href="configuracion.html">Configuraciones</a>
-
-                                    <a class="dropdown-item" href="#">Correo Institucional</a>
-                                </div>
-                                
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="../php/cerrar_sesion.php">salir</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-    </div>
+    <?php
+        include("header.html");
+    ?>
 
 
     <article style="text-align: center;">
         <h1>¡Bienvenido <span class="usu"></span>!</h1>
     </article>
 
-
     <hr>
 
- <!--    <div class="container" id="contenido-pagina">
-            <h2>¿Desea cambiar su imagen de perfil?</h2>
-            <p></p>
-        
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                Buscar Archivo
-            </button>
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-        
-                        <div class="modal-header">
-                            <h4 class="modal-title">Elija una imagen</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-        
-                        <div class="modal-body">
-                            <form id="uploadimage" action="" method="post" enctype="multipart/form-data">
-                                <input type="file" name="file" id="file" required />
-                                <input type="submit" value="Subir" class="submit" />
-                            </form>
-                            <div id="respuesta"></div>
-                        </div>
-        
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- -->
-    
- <div class="container" id="CONTENIDO">
+    <div class="container" id="CONTENIDO">
         <!-- Forma 03 -->
         <div class="container-fluid forma03-encabezado">
             <h4>Forma 03 Matrícula </h4>
@@ -278,28 +202,22 @@
         </div>
     </div>
 
-    <!-- footer /////////////////////////////// -->
-    <footer class="text-center" style="width: 100%;position: relative;background: none;border-top:none;">
-        <hr style="margin: 0;">
-        <p style="margin: 0;">© Derechos Reservados UNAH 2013</p>
-        <a href="#" title="esta es la matricula" style="margin: 0;">
-            <p style="margin: 0;"> Dirección Ejecutiva de Gestión de Tecnología (DEGT)</p>
-        </a>
-    </footer>
-    <!-- fin footer /////////////////////////// -->
+    <?php
+        include("footer.html");
+    ?>
     <!-- ////////////////////////////////////////// -->
 
-
+    <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    
+
 
     <!-- esta es la funcionalidad de la pagina -->
-    <script id="script-pagina"></script>
+    <!-- <script id="script-pagina"></script> -->
 
-    <script>
-        $(document).ready(function () {
-            $("#enlaces-menu a").click(function () {
+<!--     <script>
+        $(document).ready(function() {
+            $("#enlaces-menu a").click(function() {
 
                 var url = $(this).attr("href");
                 //alert(url);
@@ -309,7 +227,7 @@
                 return false;
             });
 
-            $("#cambiar-perfil a").click(function () {
+            $("#cambiar-perfil a").click(function() {
 
                 var url = $(this).attr("href");
 
@@ -320,7 +238,7 @@
                 return false;
             });
         });
-    </script>
+    </script> -->
 
 </body>
 
