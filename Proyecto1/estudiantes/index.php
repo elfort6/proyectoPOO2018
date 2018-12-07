@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css">
     
-    <!-- <script>
+    <script>
         (function () {
             $.ajax({
                 url: "../php/session.php",
@@ -34,7 +34,7 @@
                 }
             });
         })();
-    </script> -->
+    </script>
 </head>
 
 <body>
