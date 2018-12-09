@@ -54,8 +54,11 @@ if ($_SESSION['lvl']==2 or $_SESSION['lvl']==3){
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto" id="enlaces-menu">
                             <li class="nav-item"><a class="nav-link" href="#">Secciones</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"></a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Subir Notas</a></li>
+                            <?php if ($_SESSION['lvl'] == 3) {
+                                ?>
+                            <li class="nav-item"><a class="nav-link" href="../coordinador-carrera">Cordinador</a></li>
+                            <?php } ?>
                         </ul>
 
 

@@ -50,7 +50,8 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
                 $info = $datosdoce['primer-nombre'].' '.$datosdoce['segundo-nombre'].' '.$datosdoce['primer-apellido'].' '.$datosdoce['segundo-apellido'];
                 $_SESSION['name']=$info;
                 $_SESSION['cuenta']=$nombre_de_usuario;
-                    header ('location: ../coordinador-carrera/');
+                $_SESSION['carrera']=$datosdoce['facultad'];
+                header ('location: ../docentes/');
                     $_SESSION['lvl']=3;
                 }else{
                     if($contraseña_guardada['nivel']==4){

@@ -12,7 +12,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" id="enlaces-menu">
-
+                    <li class="nav-item"><a class="nav-link" href="../docentes/">Opciones para Docente</a></li>
                 </ul>
 
 
@@ -20,7 +20,10 @@
                     <button type="button" class="btn dropdown-toggle perfil" data-toggle="dropdown" style="box-shadow:none;">
                         <img src="../perfiles-usuarios/perfil-numerocuenta.jpg" class="rounded-circle foto-perfil "
                             width="50px" alt="Cinque Terre">
-                        <span class="usu"></span>
+                        <span class="usu">
+                        <?php
+                            echo $_SESSION["name"];
+                        ?></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div id="cambiar-perfil">

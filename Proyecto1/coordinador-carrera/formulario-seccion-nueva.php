@@ -15,24 +15,16 @@
     <div class="col-12 col-md-3">
         <div class="form-group">
             <label for="sel1" class="encabezado-tabla my-2">Asignatura:</label>
-            <select class="form-control" id="sel1">
+            <select class="form-control seleccion-asignatura" id="sel1">
                 <option value=""></option>
-                <option>Programacion II</option>
-                <option>POO</option>
-                <option>Algoritmos</option>
-                <option>Administración</option>
             </select>
         </div>
     </div>
     <div class="col-12 col-md-3">
         <div class="form-group">
             <label for="sel3" class="encabezado-tabla my-2">Docente:</label>
-            <select class="form-control" id="sel3">
+            <select class="form-control seleccion-docente">
                 <option value=""></option>
-                <option>Vladimir</option>
-                <option>Gevara</option>
-                <option>Juan Orlando</option>
-                <option>Palma</option>
             </select>
         </div>
     </div>
