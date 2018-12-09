@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Registro Docentes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
@@ -39,15 +39,6 @@
     <script>
         $(document).ready(function() {
             $("#op2").attr("class", "nav-link active");
-
-            $("#opcines-menu a").click(function() {
-                $("#op1").attr("class", "nav-link");
-                $("#op2").attr("class", "nav-link");
-
-                //console.log(this);
-                $(this).attr("class", "nav-link active");
-                //return false;
-            });
         });
     </script>
 

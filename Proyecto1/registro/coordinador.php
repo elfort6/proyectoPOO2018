@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Registro Coordinadores</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
@@ -22,7 +22,7 @@
 
         <div class="row my-4">
             <?php
-                include("formularios/formulario-e.html");
+                include("formularios/formulario-c.html");
             ?>
         </div>
 
@@ -34,13 +34,7 @@
 
     <script src="../js/jquery-3.3.1.js"></script>
 
-    <script src="js/est.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("#op1").attr("class", "nav-link active");
-        });
-    </script>
+    <script src="js/coordinador.js"></script>
 
 </body>
 

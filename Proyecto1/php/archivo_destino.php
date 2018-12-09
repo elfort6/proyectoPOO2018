@@ -37,8 +37,7 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
                 if($contraseña_guardada['nivel']==3){
                     header ('location: ../registro/');
                     $_SESSION['lvl']=3;
-                }else{
-                    
+                }else{    
                 }
             }
            }
