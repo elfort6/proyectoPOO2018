@@ -16,12 +16,12 @@
 
             $fila=mysqli_fetch_row($resultado);
 
-            $consulta='SELECT `clave` FROM `usuarios` WHERE `cuenta`="'.$fila[2].'"';
+            /* $consulta='SELECT `clave` FROM `usuarios` WHERE `cuenta`="'.$fila[2].'"';
             //echo('SELECT `clave` FROM `usuarios` WHERE `cuenta`="'.$fila[3].'"');
             $resultado2=mysqli_query(sesion::conexion(),$consulta);
-            $fila2=mysqli_fetch_row($resultado2);
+            $fila2=mysqli_fetch_row($resultado2); */
 
-            $formato.='"'.$i.'":{"nombre":"'.$fila[0].' '.$fila[1].'","clave":"'.$fila2[0].'"},';
+            $formato.='"'.$i.'":{"nombre":"'.$fila[0].' '.$fila[1].'","n_empleado":"'.$fila[2].'"},';
         }
     }
 

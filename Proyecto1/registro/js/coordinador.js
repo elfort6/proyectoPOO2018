@@ -1,5 +1,3 @@
-var claves=[];
-
 $(document).ready(function() {
     $("#op3").attr("class", "nav-link active");
 
@@ -42,14 +40,11 @@ $(document).ready(function() {
                     $("#seleccion-docente").html(
                         `<option value=""></option>`
                     );
-                    var claves=[];
                     for (var i = 0; i < respuesta["total"]; i++) {
                         $("#seleccion-docente").append(
-                            `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
+                            `<option value="${respuesta[i].n_empleado}">${respuesta[i].nombre}</option>`
                         );
-                        claves[`"${respuesta[i].nombre}"`]=respuesta[i].clave;
                     }
-                    console.log(claves);
                 },
                 error: function(error) {
                     console.log("No hay registros");
@@ -75,12 +70,24 @@ $(document).ready(function() {
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
-                    console.log("tamos mal :c");
+                    //console.log("tamos mal :c");
                 } else {
-                    console.log("tamos bien");
+                    //console.log("tamos bien");
                     var parametros = $("#formulario-coordinador").serialize();
-                    parametros+=`"&clave="${clave[$("#seleccion-docente").val()]}`
                     console.log(parametros);
+                    $.ajax({
+                        url: "php/registrar.php?opcion=3",
+                        method: "POST",
+                        dataType: "text",
+                        data: parametros,
+                        success: function (respuesta) {
+                            console.log(respuesta);
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+
                 }
                 form.classList.add('was-validated');
             }, false);

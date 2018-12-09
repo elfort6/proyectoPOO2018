@@ -58,15 +58,12 @@ switch ($_GET["opcion"]) {
     "' . $_POST["email"] . '",
     "img/perfil-por-defecto.jpg")')
         or die('<p>Error al registrar docente</p><br>' . mysqli_error($conexion));
-
-    /* $creah = mysqli_query($conexion, 'CREATE TABLE ah' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `uv` INT NOT NULL , `seccion` INT NOT NULL , `anio` INT NOT NULL , `periodo` INT NOT NULL , `calificacion` INT NOT NULL , `observacion` TEXT NOT NULL ) ENGINE = MyISAM;')
-        or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
-
-    $creaf3 = mysqli_query($conexion, 'CREATE TABLE f3' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `seccion` INT NOT NULL , `hi` INT NOT NULL , `hf` INT NOT NULL , `dias` TEXT NOT NULL , `edificio` TEXT NOT NULL , `aula` TEXT NOT NULL , `uv` INT NOT NULL , `obs` TEXT NOT NULL , `periodo` INT NOT NULL , `semana` TEXT NOT NULL ) ENGINE = MyISAM;')
-        or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
+    break;
     
-    $registro = json_encode($_POST);
-    echo $registro;
-    break; */
-        
+    case 3:
+        include("../../class/class-sesion.php");
+        $consulta='UPDATE `usuarios` SET `nivel`="3" WHERE `cuenta`="'.$_POST["docente"].'"';
+        mysqli_query(sesion::conexion(),$consulta);
+        echo("Se hizo correctamente");
+    break;
 }
