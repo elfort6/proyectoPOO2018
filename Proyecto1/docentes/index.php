@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['lvl']==2){
+if ($_SESSION['lvl']==2 or $_SESSION['lvl']==3){
 ?>
 <!DOCTYPE html>
 <html>

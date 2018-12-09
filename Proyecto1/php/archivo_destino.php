@@ -43,10 +43,22 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
                 $_SESSION['lvl']=2;
             }else{
                 if($contraseña_guardada['nivel']==3){
-                    header ('location: ../registro/');
+
+                    $consultaest='select * from docentes where n_empleado="'.$nombre_de_usuario.'"';
+                $ejecución_de_la_consultadoce=$conexion->query($consultaest);
+                $datosdoce=$ejecución_de_la_consultadoce->fetch_assoc();
+                $info = $datosdoce['primer-nombre'].' '.$datosdoce['segundo-nombre'].' '.$datosdoce['primer-apellido'].' '.$datosdoce['segundo-apellido'];
+                $_SESSION['name']=$info;
+                $_SESSION['cuenta']=$nombre_de_usuario;
+                    header ('location: ../coordinador-carrera/');
                     $_SESSION['lvl']=3;
                 }else{
-                    
+                    if($contraseña_guardada['nivel']==4){
+                        header ('location: ../registro/');
+                        $_SESSION['lvl']=4;
+                    }else{
+                        
+                    }
                 }
             }
            }

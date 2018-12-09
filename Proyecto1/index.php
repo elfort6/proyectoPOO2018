@@ -58,10 +58,10 @@ else{
             header ('location: docentes/');
         }else{
             if ($_SESSION['lvl']==3) {
-                header ('location: registro/');
+                header ('location: coordinador-carrera/');
             }else{
                 if ($_SESSION['lvl']==4) {
-                   // header ('location: ./');
+                    header ('location: registro/');
                 }else{
                     
                 }

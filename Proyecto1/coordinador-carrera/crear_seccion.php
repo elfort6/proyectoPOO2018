@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+    <?php
+        include("header.html");
+    ?>
+
+    <div class="container">
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modificar sección creada</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <?php
+                            include("formulario-seccion-nueva.php");
+                        ?>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-dismiss="modal" style="margin-bottom: 1em; background: #2980b9; color:white;">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Encabezado -->
+        <h1>Carrera Ingenieria en Sistemas</h1>
+
+        <!-- Crear nueva seccion -->
+        <!-- <h3 style="color: #0045fa;">Abrir nueva sección</h3> -->
+        <div class="container-fluid border my-5" style="padding: 5px;">
+            <?php
+                include("formulario-seccion-nueva.php");
+            ?>
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" class="btn" style="margin-bottom: 1em; background: #2980b9; color:white;">Crear
+                        Sección</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de secciones creadas -->
+        <div class="container-fluid forma03-tabla">
+            <div class="text-center">
+                <div class=" encabezado">
+                    Secciones Creadas
+                </div>
+            </div>
+
+            <div>
+                <table class="table table-striped table-responsive-lg">
+                    <thead>
+                        <tr>
+                            <th>Sección</th>
+                            <th>Asignatura</th>
+                            <th>Docente</th>
+                            <th>Cupos</th>
+                            <th>Dias</th>
+                            <th>Periodo</th>
+                            <th>HI</th>
+                            <th>HF</th>
+                            <th>Edificio</th>
+                            <th>Aula</th>
+                            <th>Cancelar</th>
+                            <!-- <th>Semana</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0700</td>
+                            <td>Matemática 1</td>
+                            <td>0700</td>
+                            <td>0700</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>0800</td>
+                            <td>F1</td>
+                            <td>404</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td><button type="button" class="btn" data-toggle="modal" style="padding: 1px; background:none;"
+                                    data-target="#myModal">
+                                    Editar
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>0800</td>
+                            <td>Geometría</td>
+                            <td>1400</td>
+                            <td>1400</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>1500</td>
+                            <td>D1</td>
+                            <td>303</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td><button type="button" class="btn" data-toggle="modal" style="padding: 1px; background:none;"
+                                    data-target="#myModal">
+                                    Editar
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>0900</td>
+                            <td>Cálculo 2</td>
+                            <td>1700</td>
+                            <td>1700</td>
+                            <td>LuMaMiJuVi</td>
+                            <td>1800</td>
+                            <td>F1</td>
+                            <td>103</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td><button type="button" class="btn" data-toggle="modal" style="padding: 1px; background:none;"
+                                    data-target="#myModal">
+                                    Editar
+                                </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <?php
+            include("footer.html");
+        ?>
+
+    </div>
+
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
