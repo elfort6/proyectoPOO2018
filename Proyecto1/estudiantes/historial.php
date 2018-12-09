@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['lvl']==1){
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,21 +20,21 @@
 <body>
 
     <?php
-        include("header.html");
+        include("header.php");
     ?>
 
     <div id="contenido-pagina">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <a href="#"><img src="img/foto.jpg" alt="Cinque Terre" width="150px"></a>
+                    <a href="#"><img src="../img/foto.jpg" alt="Cinque Terre" width="150px"></a>
                 </div>
                 <div class="col-md-5">
                     <p>
-                        Nombre: Nombre-Alumno
+                        Nombre: <?php echo($_SESSION['name'])?>
                     </p>
                     <p>
-                        Cuenta: 203654124
+                        Cuenta: <?php echo($_SESSION['cuenta'])?>
                     </p>
                     <p>
                         Carrera: INGENIERIA EN SISTEMAS
@@ -120,3 +124,9 @@
 </body>
 
 </html>
+<?php
+}
+else{
+    header ('location: ../');
+}
+?>

@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['lvl']==1){
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,41 +16,18 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css">
-    
-    <script>
-        (function () {
-            $.ajax({
-                url: "../php/session.php",
-                method: "GET",
-                data: "{}",
-                dataType: "text",
-                success: function (respuesta) {
-                    console.log("El servidor DICE: " + respuesta);
-                    if (respuesta == '') {
-                        window.location.replace("../index.html");
-                    } else {
-                        $('.usu').html(respuesta);
-                    }
-
-                },
-                error: function (err) {
-                    console.log(err);
-                }
-            });
-        })();
-    </script>
 </head>
 
 <body>
 
 
     <?php
-        include("header.html");
+        include("header.php");
     ?>
 
 
     <article style="text-align: center;">
-        <h1>¡Bienvenido <span class="usu"></span>!</h1>
+        <h1>¡Bienvenido <span class="usu"><?php echo($_SESSION['name'])?></span>!</h1>
     </article>
 
     <hr>
@@ -63,10 +44,10 @@
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
-                                Nombre: Nombre-Alumno
+                                Nombre: <?php echo($_SESSION['name'])?>
                             </p>
                             <p class="cue">
-                                Cuenta: 203654124
+                                Cuenta: <?php echo($_SESSION['cuenta'])?>
                             </p>
                             <p>
                                 Carrera: INGENIERIA EN SISTEMAS
@@ -211,35 +192,12 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 
-
-    <!-- esta es la funcionalidad de la pagina -->
-    <!-- <script id="script-pagina"></script> -->
-
-<!--     <script>
-        $(document).ready(function() {
-            $("#enlaces-menu a").click(function() {
-
-                var url = $(this).attr("href");
-                //alert(url);
-
-                $("#CONTENIDO").load(url + " #contenido-pagina");
-
-                return false;
-            });
-
-            $("#cambiar-perfil a").click(function() {
-
-                var url = $(this).attr("href");
-
-                $("#CONTENIDO").load(url + " #contenido-pagina");
-
-                $("#script-pagina").load("js/perfiles.js");
-                console.log("Se cargó el html");
-                return false;
-            });
-        });
-    </script> -->
-
 </body>
 
 </html>
+<?php
+}
+else{
+    header ('location: ../');
+}
+?>

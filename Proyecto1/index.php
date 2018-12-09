@@ -1,3 +1,9 @@
+<?php
+session_start();
+//si hay una sesión
+if (!isset($_SESSION['name'])){
+    //se muestra el contenido de la página web
+?>
 <!DOCTYPE html>
 <html>
 
@@ -38,22 +44,33 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Este script era para hacerlo estilo youtube :'c -->
-    <!-- <script>
-        $(document).ready(function() {
-            $("#enlaces-menu a").click(function() {
-
-                var url = $(this).attr("href");
-
-                $("#CONTENIDO").load(url + " #contenido-pagina");
-
-                return false;
-            });
-        });
-    </script> -->
-
 </body>
 
 </html>
 
-
+<?php
+}//si no hay sesión
+else{
+    if ($_SESSION['lvl']==1) {
+        header ('location: estudiantes/');
+    }else{
+        if ($_SESSION['lvl']==2) {
+            header ('location: docentes/');
+        }else{
+            if ($_SESSION['lvl']==3) {
+                header ('location: registro/');
+            }else{
+                if ($_SESSION['lvl']==4) {
+                   // header ('location: ./');
+                }else{
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+?>

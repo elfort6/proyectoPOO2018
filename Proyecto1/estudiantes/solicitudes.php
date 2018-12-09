@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['lvl']==1){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +18,7 @@
 <body>
 
     <?php
-        include("header.html");
+        include("header.php");
     ?>
 
     <div class="container">
@@ -31,3 +35,9 @@
     <script src="../js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+}
+else{
+    header ('location: ../');
+}
+?>

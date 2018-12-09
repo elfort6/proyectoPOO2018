@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['lvl']==1){
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +20,7 @@
 
 <body>
     <?php
-        include("header.html");
+        include("header.php");
     ?>
 
     <div class="container" id="contenido-pagina">
@@ -251,3 +255,9 @@
 </body>
 
 </html>
+<?php
+}
+else{
+    header ('location: ../');
+}
+?>

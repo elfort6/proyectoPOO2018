@@ -19,25 +19,34 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
         //si el resultado de la comparación ha sido verdadero
         if ($verificar_contraseña){
             //se asigna la sesión y redirecciona
+            
+            //print('nombre: '.$datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido']);
+           if($contraseña_guardada['nivel']==1){
             $consultaest='select * from estudiantes where cuenta="'.$nombre_de_usuario.'"';
             $ejecución_de_la_consultaest=$conexion->query($consultaest);
             $datos=$ejecución_de_la_consultaest->fetch_assoc();
             $info = $datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido'];
             $_SESSION['name']=$info;
             $_SESSION['cuenta']=$nombre_de_usuario;
-            //print('nombre: '.$datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido']);
-           if($contraseña_guardada['nivel']==1){
             header ('location: ../estudiantes/');
             $_SESSION['lvl']=1;
            }else{
             if($contraseña_guardada['nivel']==2){
+
+                $consultaest='select * from docentes where n_empleado="'.$nombre_de_usuario.'"';
+            $ejecución_de_la_consultadoce=$conexion->query($consultaest);
+            $datosdoce=$ejecución_de_la_consultadoce->fetch_assoc();
+            $info = $datosdoce['primer-nombre'].' '.$datosdoce['segundo-nombre'].' '.$datosdoce['primer-apellido'].' '.$datosdoce['segundo-apellido'];
+            $_SESSION['name']=$info;
+            $_SESSION['cuenta']=$nombre_de_usuario;
                 header ('location: ../docentes/');
                 $_SESSION['lvl']=2;
             }else{
                 if($contraseña_guardada['nivel']==3){
                     header ('location: ../registro/');
                     $_SESSION['lvl']=3;
-                }else{    
+                }else{
+                    
                 }
             }
            }

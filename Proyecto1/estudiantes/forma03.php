@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['lvl']==1){
+?>
 <!DOCTYPE html>
 <html>
 
@@ -25,10 +29,10 @@
                         </div>
                         <div class="col-12 col-md-8">
                             <p>
-                                Nombre: Nombre-Alumno
+                                Nombre: <?php echo($_SESSION['name'])?>
                             </p>
                             <p>
-                                Cuenta: 203654124
+                                Cuenta: <?php echo($_SESSION['cuenta'])?>
                             </p>
                             <p>
                                 Carrera: INGENIERIA EN SISTEMAS
@@ -123,3 +127,9 @@
 </body>
 
 </html>
+<?php
+}
+else{
+    header ('location: ../');
+}
+?>

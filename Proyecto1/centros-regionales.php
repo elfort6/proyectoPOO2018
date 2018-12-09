@@ -1,3 +1,10 @@
+<?php
+session_start();
+//si hay una sesión
+if (!isset($_SESSION['name'])){
+    //se muestra el contenido de la página web
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,3 +56,29 @@
 
 </body>
 </html>
+<?php
+}//si no hay sesión
+else{
+    if ($_SESSION['lvl']==1) {
+        header ('location: estudiantes/');
+    }else{
+        if ($_SESSION['lvl']==2) {
+            header ('location: docentes/');
+        }else{
+            if ($_SESSION['lvl']==3) {
+                header ('location: registro/');
+            }else{
+                if ($_SESSION['lvl']==4) {
+                   // header ('location: ./');
+                }else{
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+}
+?>
