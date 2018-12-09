@@ -1,3 +1,21 @@
+//llenar las opciones de las carreras con la base de datos
+$.ajax({
+    url: "php/carreras.php",
+    dataType: "json",
+    success: function(respuesta) {
+        console.log(respuesta);
+        console.log(respuesta["total"]);
+        for (var i = 0; i < respuesta.total; i++) {
+            $("#seleccion-carrera").append(
+                `<option value="${respuesta[i].carrera}">${respuesta[i].nombre}</option>`
+            );
+        }
+    },
+    error: function(error) {
+        console.log(error);
+    }
+});
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
     'use strict';
