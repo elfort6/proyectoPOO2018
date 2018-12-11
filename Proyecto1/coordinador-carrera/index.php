@@ -43,13 +43,13 @@
                     <!-- Modal body -->
                     <div class="modal-body">
                         <?php
-                            include("formulario-seccion-nueva.php");
+                            //include("formulario-seccion-nueva.php");
                         ?>
                     </div>
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal" style="margin-bottom: 1em; background: #2980b9; color:white;">Guardar</button>
+                        <a href="index.php"><button type="button" class="btn" data-dismiss="modal" style="margin-bottom: 1em; background: #2980b9; color:white;">Guardar</button></a>
                     </div>
                 </div>
             </div>
@@ -59,23 +59,20 @@
         <h1>Carrera <?php
             include("../class/class-sesion.php");
             $consulta='SELECT `nombre` FROM `ofertaacademica` WHERE  carrera="'.$_SESSION['carrera'].'"';
-            $resultado=mysqli_query(sesion::conexion(),$consulta);
+            $resultado=mysqli_query(sesion::conexion(), $consulta);
             $fila=mysqli_fetch_row($resultado);
             echo($fila[0]);
-        ?></h1>
+        ?>
+        </h1>
 
         <!-- Crear nueva seccion -->
         <!-- <h3 style="color: #0045fa;">Abrir nueva sección</h3> -->
         <div class="container-fluid border my-5" style="padding: 5px;">
+
             <?php
                 include("formulario-seccion-nueva.php");
             ?>
-            <div class="row">
-                <div class="col-12">
-                    <button type="button" class="btn" style="margin-bottom: 1em; background: #2980b9; color:white;">Crear
-                        Sección</button>
-                </div>
-            </div>
+
         </div>
 
         <!-- Tabla de secciones creadas -->

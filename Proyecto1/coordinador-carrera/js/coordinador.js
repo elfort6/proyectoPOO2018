@@ -1,6 +1,6 @@
 $(document).ready(function () {
+    
     //una vez se selecciona una carrera se buscan los docentes asignados en dicha carrera
-
     $.ajax({
         url: "ajax/docentes.php",
         dataType: "json",
@@ -25,7 +25,7 @@ $(document).ready(function () {
             alert("No hay docentes disponibles para esta carrera.");
         }
     });
-
+    //tambien se buscan las asignaturas
     $.ajax({
         url: "ajax/asignaturas.php",
         dataType: "json",
@@ -47,8 +47,37 @@ $(document).ready(function () {
             $(".seleccion-asignatura").html(
                 `<option value=""></option>`
             );
-            alert("No hay docentes disponibles para esta carrera.");
+            alert("No hay asignaturas disponibles para esta carrera.");
         }
     });
 
+});
+
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    console.log("tamos mal :c");
+                } else {
+                    console.log("tamos bien");
+                    var parametros = $("#formulario-docente").serialize();
+                    console.log(parametros);
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();
+
+$("#seccionnueva").submit(function() {
+    return false;
 });
