@@ -1,0 +1,25 @@
+.col-nota{
+    width:167px;
+}
+
+.num-nota{
+    height: 30px;
+    padding: 2px;
+}
+
+.btn-notas{
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    width:151px;
+    border: 1px solid gray;
+}
+
+.cont-btn{
+    display:block;
+    margin-left:auto;
+}
+
+.icono{
+    cursor: pointer;
+}
