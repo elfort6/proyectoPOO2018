@@ -28,6 +28,7 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
             $info = $datos['primer_nombre'].' '.$datos['segundo_nombre'].' '.$datos['primer_apellido'].' '.$datos['segundo_apellido'];
             $_SESSION['name']=$info;
             $_SESSION['cuenta']=$nombre_de_usuario;
+            $_SESSION['carrera']=$datos['carrera'];
             header ('location: ../estudiantes/');
             $_SESSION['lvl']=1;
            }else{
@@ -39,6 +40,7 @@ if (empty($_SESSION) and isset($_POST['datos_introducidos_usuario'])){
             $info = $datosdoce['primer-nombre'].' '.$datosdoce['segundo-nombre'].' '.$datosdoce['primer-apellido'].' '.$datosdoce['segundo-apellido'];
             $_SESSION['name']=$info;
             $_SESSION['cuenta']=$nombre_de_usuario;
+            $_SESSION['carrera']=$datosdoce['facultad'];
                 header ('location: ../docentes/');
                 $_SESSION['lvl']=2;
             }else{

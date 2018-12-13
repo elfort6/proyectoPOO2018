@@ -2,8 +2,8 @@
     session_start();
     include("../../class/class-sesion.php");
 
-    $consulta='SELECT `nombre`,`codigo` FROM `asignaturas` WHERE  codigo LIKE "'.$_SESSION['carrera'].'%"';
-
+    $consulta='SELECT `asignatura`,`codigo` FROM pe' . $_SESSION["carrera"] .'  WHERE codigo like "'.$_POST["area"].'%"';
+    //echo($consulta);
     $resultado=mysqli_query(sesion::conexion(),$consulta);
 
     $tope=mysqli_num_rows($resultado);
@@ -17,7 +17,7 @@
 
             $fila=mysqli_fetch_row($resultado);
 
-            $formato.='"'.$i.'":{"nombre":"'.$fila[0].'","clase":"'.$fila[1].'"},';
+            $formato.='"'.$i.'":{"nombre":"'.$fila[0].'","codigo":"'.$fila[1].'"},';
         }
     }
 

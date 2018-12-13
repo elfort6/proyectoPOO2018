@@ -37,11 +37,8 @@ if ($_SESSION['lvl']==1){
                 <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="sel1" class="encabezado-tabla my-2">Departamento:</label>
-                        <select class="form-control" id="sel1">
-                            <option>Matemáticas</option>
-                            <option>Ingenieria en Sistemas</option>
-                            <option>Sociología</option>
-                            <option>Materia Condensada</option>
+                        <select class="form-control area" id="sel1">
+                            
                         </select>
                     </div>
                 </div>
@@ -249,6 +246,7 @@ if ($_SESSION['lvl']==1){
     </div>
 
     <script src="../js/jquery-3.3.1.js"></script>
+    <script src="js/estudiantes.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 

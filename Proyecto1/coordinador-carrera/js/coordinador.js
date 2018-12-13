@@ -37,7 +37,7 @@ $(document).ready(function () {
             );
             for (var i = 0; i < respuesta["total"]; i++) {
                 $(".seleccion-asignatura").append(
-                    `<option value="${respuesta[i].nombre}">${respuesta[i].nombre}</option>`
+                    `<option value="${respuesta[i].clase}">${respuesta[i].nombre}</option>`
                 );
             }
         },
@@ -69,8 +69,20 @@ $(document).ready(function () {
                     console.log("tamos mal :c");
                 } else {
                     console.log("tamos bien");
-                    var parametros = $("#formulario-docente").serialize();
+                    var parametros = $("#seccionnueva").serialize();
                     console.log(parametros);
+                    $.ajax({
+                        url: "ajax/crearseccion.php?opcion=1",
+                        method: "POST",
+                        dataType: "json",
+                        data: parametros,
+                        success: function (respuesta) {
+                            console.log(respuesta);
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
                 }
                 form.classList.add('was-validated');
             }, false);
