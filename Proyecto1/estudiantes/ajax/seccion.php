@@ -2,7 +2,7 @@
     session_start();
     include("../../class/class-sesion.php");
 
-    $consulta='SELECT `seccion`,`docente` FROM secciones  WHERE asignatura="'.$_POST["clase"].'"';
+    $consulta='SELECT `seccion`,`codigosec` FROM secciones  WHERE asignatura="'.$_POST["clase"].'"';
     //echo($consulta);
     $resultado=mysqli_query(sesion::conexion(),$consulta);
 

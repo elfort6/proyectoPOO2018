@@ -1,21 +1,16 @@
 <form class="needs-validation" id="seccionnueva" novalidate>
     <div class="row">
-        <div class="col-12 col-md-3">
+
+         <div class="col-12 col-md-3">
             <div class="form-group">
-                <label for="sel2" class="encabezado-tabla my-2">Sección:</label>
-                <select class="form-control" name="seccion" required>
-                    <option value=""></option>
-                    <option>0700</option>
-                    <option>0800</option>
-                    <option>0900</option>
-                    <option>1000</option>
-                    <option>1100</option>
-                </select>
+                <label for="sel5" class="encabezado-tabla my-2">Sección:</label>
+                <input type="text" class="form-control" name="seccion" required>
                 <div class="invalid-feedback">
-                    Se requiere una sección válida.
+                    Se requiere llenar este campo.
                 </div>
             </div>
         </div>
+
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel1" class="encabezado-tabla my-2">Asignatura:</label>
@@ -57,6 +52,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel6" class="encabezado-tabla my-2">Periodo:</label>
@@ -66,6 +62,16 @@
                     <option>2</option>
                     <option>3</option>
                 </select>
+                <div class="invalid-feedback">
+                    Se requiere llenar este campo.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label for="sel5" class="encabezado-tabla my-2">Año:</label>
+                <input type="text" class="form-control" name="anio" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>
@@ -122,7 +128,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel10" class="encabezado-tabla my-2">Aula:</label>
-                <input type="number" class="form-control" name="aula" required>
+                <input type="text" class="form-control" name="aula" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>

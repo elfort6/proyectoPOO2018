@@ -25,7 +25,7 @@ switch ($_GET["opcion"]) {
         "img/perfil-por-defecto.jpg")')
             or die('<p>Error al registrar estudiante</p><br>' . mysqli_error($conexion));
 
-        $creah = mysqli_query($conexion, 'CREATE TABLE ah' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `uv` INT NOT NULL , `seccion` INT NOT NULL , `anio` INT NOT NULL , `periodo` INT NOT NULL , `calificacion` INT NOT NULL , `observacion` TEXT NOT NULL ) ENGINE = MyISAM;')
+        $creah = mysqli_query($conexion, 'CREATE TABLE ha' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `uv` INT NOT NULL , `seccion` INT NOT NULL , `anio` INT NOT NULL , `periodo` INT NOT NULL , `calificacion` INT NOT NULL , `observacion` TEXT NOT NULL ) ENGINE = MyISAM;')
             or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
 
         $creaf3 = mysqli_query($conexion, 'CREATE TABLE f3' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `seccion` INT NOT NULL , `hi` INT NOT NULL , `hf` INT NOT NULL , `dias` TEXT NOT NULL , `edificio` TEXT NOT NULL , `aula` TEXT NOT NULL , `uv` INT NOT NULL , `obs` TEXT NOT NULL , `periodo` INT NOT NULL , `semana` TEXT NOT NULL ) ENGINE = MyISAM;')
