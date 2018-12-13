@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="../../css/fontawesome/all.css">
     <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="css/secciones.css">
 
 </head>
 <body>
