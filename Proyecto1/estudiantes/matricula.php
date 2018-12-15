@@ -89,40 +89,8 @@ if ($_SESSION['lvl']==1){
                             <!-- <th>Semana</th> -->
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>MM110</td>
-                            <td>Matemática 1</td>
-                            <td>0700</td>
-                            <td>0700</td>
-                            <td>0800</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn cancela" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
-                        <tr>
-                            <td>MM111</td>
-                            <td>Geometría y Trigonometría</td>
-                            <td>1400</td>
-                            <td>1400</td>
-                            <td>1500</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
-                        <tr>
-                            <td>MM202</td>
-                            <td>Cálculo 2</td>
-                            <td>1700</td>
-                            <td>1700</td>
-                            <td>1800</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
+                    <tbody class="f3">
+                        
                     </tbody>
                 </table>
             </div>
@@ -152,29 +120,8 @@ if ($_SESSION['lvl']==1){
                             <!-- <th>Semana</th> -->
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>MM111</td>
-                            <td>Geometría y Trigonometría</td>
-                            <td>1400</td>
-                            <td>1400</td>
-                            <td>1500</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px;background:none;">Cancelar</button></td>
-                        </tr>
-                        <tr>
-                            <td>MM202</td>
-                            <td>Cálculo 2</td>
-                            <td>1700</td>
-                            <td>1700</td>
-                            <td>1800</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
+                    <tbody class="">
+                        
                     </tbody>
                 </table>
             </div>
@@ -204,29 +151,8 @@ if ($_SESSION['lvl']==1){
                             <!-- <th>Semana</th> -->
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>MM111</td>
-                            <td>Geometría y Trigonometría</td>
-                            <td>1400</td>
-                            <td>1400</td>
-                            <td>1500</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
-                        <tr>
-                            <td>MM202</td>
-                            <td>Cálculo 2</td>
-                            <td>1700</td>
-                            <td>1700</td>
-                            <td>1800</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
+                    <tbody class="f3">
+                        
                     </tbody>
                 </table>
             </div>
@@ -242,6 +168,7 @@ if ($_SESSION['lvl']==1){
     <script src="js/estudiantes.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="js/f3.js"></script>
 
 </body>
 

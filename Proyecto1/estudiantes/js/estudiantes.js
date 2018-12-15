@@ -1,4 +1,45 @@
+var cargarf3 = function () {
+    $.ajax({
+        url: "ajax/f3.php",
+        dataType: "json",
+        success: function (respuesta) {
+            console.log(respuesta);
+            //console.log(respuesta["total"]);
+            $(".f3").html(
+                ``
+            );
+            for (var i = 0; i < respuesta.length; i++) {
+                $(".f3").append(
+                    `<tr>
+                            <td>${respuesta[i].codigo}</td>
+                            <td>${respuesta[i].asignatura}</td>
+                            <td>${respuesta[i].seccion}</td>
+                            <td>${respuesta[i].hi}</td>
+                            <td>${respuesta[i].hf}</td>
+                            <td>${respuesta[i].dias}</td>
+                            <td>${respuesta[i].edificio}</td>
+                            <td>${respuesta[i].aula }</td>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
+                        </tr>
+                    `
+                );
+            }
+        },
+        error: function (error) {
+            console.error(error);
+            console.log("No hay registros");
+            $(".f3").html(
+                ``
+            );
+            //alert("No hay docentes disponibles para esta carrera.");
+        }
+    });
+    
+}
+
+
 $(document).ready(function () {
+    cargarf3();
     $.ajax({
         url: "ajax/areas.php",
         dataType: "json",
@@ -109,6 +150,7 @@ $(document).ready(function () {
             dataType: "text",
             success: function(respuesta) {
                 console.log(respuesta);
+                cargarf3();
             },
             error: function(error) {
                 console.error("no funcionó");
