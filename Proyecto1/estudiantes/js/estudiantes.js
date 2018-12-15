@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    
-    
     $.ajax({
         url: "ajax/areas.php",
         dataType: "json",
@@ -98,6 +96,25 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+
+    $("#boton-matricular").click(function(){
+        
+        var parametro="seccion="+$("#sel3").val();
+
+        $.ajax({
+            url: "ajax/matricular.php",
+            method:"POST",
+            data: parametro,
+            dataType: "text",
+            success: function(respuesta) {
+                console.log(respuesta);
+            },
+            error: function(error) {
+                console.error("no funcionó");
+            }
+        });
+
     });
 
 });

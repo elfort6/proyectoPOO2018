@@ -46,11 +46,6 @@ if ($_SESSION['lvl']==1){
                     <div class="form-group">
                         <label for="sel2" class="encabezado-tabla my-2">Asignatura:</label>
                         <select class="form-control" id="sel2">
-                            <option>POO</option>
-                            <option>Ingenieria en Sistemas</option>
-                            <option>Sistemas Operativos</option>
-                            <option>Progra 2</option>
-                            <option>Estudios de la mujer</option>
                         </select>
                     </div>
                 </div>
@@ -58,15 +53,13 @@ if ($_SESSION['lvl']==1){
                     <div class="form-group">
                         <label for="sel3" class="encabezado-tabla my-2">Sección:</label>
                         <select class="form-control" id="sel3">
-                            <option>10:00 Guevara</option>
-                            <option>8:00 Hilda</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button type="button" class="btn btn-danger" style="margin-bottom: 1em;">Matricular Asignatura</button>
+                    <button type="button" id="boton-matricular" class="btn btn-danger" style="margin-bottom: 1em;">Matricular Asignatura</button>
                 </div>
             </div>
         </div>

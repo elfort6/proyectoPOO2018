@@ -14,7 +14,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" id="enlaces-menu">
                     <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
-                    <li class="nav-item"><a class="nav-link" href="solicitudes.php">solicitudes</a></li>
                     <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
                 </ul>
 
