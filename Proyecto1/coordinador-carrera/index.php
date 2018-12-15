@@ -28,33 +28,6 @@
     ?>
 
     <div class="container">
-
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Modificar sección creada</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <?php
-                            //include("formulario-seccion-nueva.php");
-                        ?>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                        <a href="index.php"><button type="button" class="btn" data-dismiss="modal" style="margin-bottom: 1em; background: #2980b9; color:white;">Guardar</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Encabezado -->
         <h1>Carrera <?php
             include("../class/class-sesion.php");
