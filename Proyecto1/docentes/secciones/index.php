@@ -21,9 +21,12 @@
 
 </head>
 <body>
+
     <?php
         include("header.php");
     ?>
+
+    <span class="d-none" id="codigoSeccion"><?php echo $_POST['codigoSeccion'] ?></span>
 
     <div class="container-fluid my-5" id="contenido-principal">
 
@@ -45,6 +48,7 @@
     <script src="../../js/bootstrap.min.js"></script>
 
     <script src="../js/animaciones.js"></script>
+    <script src="js/secciones.js"></script>
     
 </body>
 </html>

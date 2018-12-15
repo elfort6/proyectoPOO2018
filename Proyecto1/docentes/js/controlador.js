@@ -47,7 +47,10 @@ $(document).ready(function(){
                                 <li>Hora final: ${respuesta[i].hf}</li>
                             </ul>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-lg btn-block btn-light text-dark" id="${respuesta[i].codigosec}">Ver Curso</button>
+                                <form action="secciones/index.php" method="post" style="width: 100%;">
+                                    <input type="text" name="codigoSeccion" class="d-none" value="${respuesta[i].codigosec}"></input>
+                                    <button type="submit" class="btn btn-lg btn-block btn-light text-dark">Ver Curso</button>
+                                </form>
                             </div>
                         </div>
                     </div>`
@@ -59,5 +62,4 @@ $(document).ready(function(){
             console.error(error);
         }
     });
-
 });

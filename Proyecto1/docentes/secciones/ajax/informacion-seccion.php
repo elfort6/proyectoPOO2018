@@ -1,11 +1,16 @@
 <?php
-    session_start();
+    include("../../../class/class-conexion.php");
 
-    include("../../class/class-conexion.php");
+    //$_POST['codigoSeccion']="0800_IS-311_2_2018";
 
+    if(!isset($_POST)){
+        echo('No se seleccionó ninguna sección');
+        exit;
+    }
+    
     $conexion=new Conexion();
 
-    $consulta='SELECT `seccion`, `asignatura`, `cupos`, `dias`, `hora_inicial`, `hora_final`, `edificio`, `aula`, `codigosec` FROM `secciones` WHERE `docente`="'.$_SESSION['cuenta'].'"';
+    $consulta='SELECT `seccion`, `asignatura`, `cupos`, `dias`, `hora_inicial`, `hora_final`, `edificio`, `aula`, `codigosec` FROM `secciones` WHERE `codigosec`="'.$_POST['codigoSeccion'].'"';
 
     $resultado=$conexion->ejecutarConsulta($consulta);
 
