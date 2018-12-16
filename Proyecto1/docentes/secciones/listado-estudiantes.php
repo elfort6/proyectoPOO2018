@@ -13,77 +13,18 @@
                 <th>Correo Institucional</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>pedro@gmail.com</td>
-                <td>pedro@unah.hn</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>juan@yahoo.com</td>
-                <td>juan@unah.hn</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>20161008775</td>
-                <td>Catalina Alejandra Rivera Mejia</td>
-                <td>catalina@hotmail.com</td>
-                <td>catalina@unah.hn</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>juan@yahoo.com</td>
-                <td>juan@unah.hn</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>pedro@gmail.com</td>
-                <td>pedro@unah.hn</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>pedro@gmail.com</td>
-                <td>pedro@unah.hn</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>juan@yahoo.com</td>
-                <td>juan@unah.hn</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>20161008775</td>
-                <td>Catalina Alejandra Rivera Mejia</td>
-                <td>catalina@hotmail.com</td>
-                <td>catalina@unah.hn</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>juan@yahoo.com</td>
-                <td>juan@unah.hn</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>pedro@gmail.com</td>
-                <td>pedro@unah.hn</td>
-            </tr>
+        <tbody id="lista-estudiantes">
         </tbody>
     </table>
+    <div class="row">
+        <div class="col-6">
+            <span id="p1" class="d-none"></span>
+            <button type="button" class="btn btn-lg btn-block btn-light text-dark" onclick="copiarAlPortapapeles('p1')">Copiar Correos Personales</button>
+        </div>
+        <div class="col-6">
+        <span id="p2" class="d-none"></span>
+            <button type="button" class="btn btn-lg btn-block btn-light text-dark" onclick="copiarAlPortapapeles('p2')">Copiar Correos Institucionales</button>
+        </div>
+    </div>
+    
 </div>

@@ -64,6 +64,7 @@ if ($_SESSION['lvl']==2 or $_SESSION['lvl']==3) {
 
             <div class="card-deck mb-3 text-center" id="secciones">
             </div>
+            
         </div>
 
     </div>
