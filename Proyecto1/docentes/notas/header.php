@@ -11,8 +11,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" id="enlaces-menu">
                     <li class="nav-item"><a class="nav-link" href="../">Secciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../secciones">Listado de Alumnos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="">Subir Notas</a></li>
+                    <li class="nav-item"><a id="listado-est" class="nav-link" href="../secciones">Listado de Alumnos</a></li>
+                    <li class="nav-item"><a id="listado-notas" class="nav-link" href="">Subir Notas</a></li>
                     <?php if ($_SESSION['lvl'] == 3) {
     ?>
                     <li class="nav-item"><a class="nav-link" href="../coordinador-carrera">Cordinador</a></li>

@@ -1,6 +1,9 @@
 $(document).ready(function(){
     //obteniendo las secciones
-    var parametro="codigoSeccion="+$("#codigoSeccion").html();
+    var parametro="codigoSeccion="+$("#codigoSeccion").val();
+    $("#listado-est").attr("href", `?${parametro}`);
+    $("#listado-notas").attr("href", `../notas/index.php?${parametro}`);
+
     console.log(parametro);
 
     $.ajax({
@@ -41,6 +44,7 @@ $(document).ready(function(){
         dataType: "json",
         success: function (respuesta) {
             console.log(respuesta);
+            console.log(respuesta.length);
             for (let i = 0; i < respuesta.length; i++) {
                 $("#lista-estudiantes").append(
                     `<tr>

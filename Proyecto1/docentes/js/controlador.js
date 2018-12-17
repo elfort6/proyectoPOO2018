@@ -47,7 +47,7 @@ $(document).ready(function(){
                                 <li>Hora final: ${respuesta[i].hf}</li>
                             </ul>
                             <div class="modal-footer">
-                                <form action="secciones/index.php" method="post" style="width: 100%;">
+                                <form action="secciones/index.php" method="GET" style="width: 100%;">
                                     <input type="text" name="codigoSeccion" class="d-none" value="${respuesta[i].codigosec}"></input>
                                     <button type="submit" class="btn btn-lg btn-block btn-light text-dark">Ver Curso</button>
                                 </form>

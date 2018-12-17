@@ -2,7 +2,7 @@
 
     <div class="card mb-3 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal text-center" id="codigo">MM-110</h4>
+            <h4 class="my-0 font-weight-normal text-center" id="codigo"></h4>
         </div>
         <div class="card-body">
             <div class="row">

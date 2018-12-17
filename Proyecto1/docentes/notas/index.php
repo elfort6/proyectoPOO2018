@@ -26,6 +26,8 @@
         include("header.php");
     ?>
 
+    <input type="text" class="d-none" id="codigoSeccion" name="codigoSeccion" value="<?php echo $_GET['codigoSeccion'] ?>">
+
     <div class="container-fluid my-5" id="contenido-principal">
 
         <?php
@@ -46,6 +48,7 @@
     <script src="../../js/bootstrap.min.js"></script>
     
     <script src="../js/animaciones.js"></script>
+    <script src="js/notas.js"></script>
 
 </body>
 </html>

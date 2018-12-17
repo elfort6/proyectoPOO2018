@@ -13,82 +13,12 @@
                 <th>Establecer</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>22</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>45</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>20161008775</td>
-                <td>Catalina Alejandra Rivera Mejia</td>
-                <td>57</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>64</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>65</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>22</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>81</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>20161008775</td>
-                <td>Catalina Alejandra Rivera Mejia</td>
-                <td>44</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>20161002563</td>
-                <td>Juan Ramon Molina Alvarado</td>
-                <td>78</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>20161005896</td>
-                <td>Pedro Alejandro Zuniga Cabrera</td>
-                <td>61</td>
-                <td class="col-nota"><input class="form-control num-nota" type="number"></td>
-            </tr>
+        <tbody id="lista-notas">
         </tbody>
     </table>
     <div class="container-fluid">
         <div class="col-nota cont-btn">
-            <button type="button" class="btn btn-light btn-notas">Guardar Cambios</button>
+            <button id="guardar-cambios" type="button" class="btn btn-light btn-notas">Guardar Cambios</button>
         </div>
     </div>
 </div>

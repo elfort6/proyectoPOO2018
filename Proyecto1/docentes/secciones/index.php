@@ -26,7 +26,7 @@
         include("header.php");
     ?>
 
-    <span class="d-none" id="codigoSeccion"><?php echo $_POST['codigoSeccion'] ?></span>
+    <input type="text" class="d-none" id="codigoSeccion" name="codigoSeccion" value="<?php echo $_GET['codigoSeccion'] ?>">
 
     <div class="container-fluid my-5" id="contenido-principal">
 
