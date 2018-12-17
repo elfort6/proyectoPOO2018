@@ -28,7 +28,7 @@ switch ($_GET["opcion"]) {
         $creah = mysqli_query($conexion, 'CREATE TABLE ha' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `uv` INT NOT NULL , `seccion` INT NOT NULL , `anio` INT NOT NULL , `periodo` INT NOT NULL , `calificacion` INT NOT NULL , `observacion` TEXT NOT NULL ) ENGINE = MyISAM;')
             or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
 
-        $creaf3 = mysqli_query($conexion, 'CREATE TABLE f3' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `seccion` INT NOT NULL , `hi` INT NOT NULL , `hf` INT NOT NULL , `dias` TEXT NOT NULL , `edificio` TEXT NOT NULL , `aula` TEXT NOT NULL , `uv` INT NOT NULL , `obs` TEXT NOT NULL , `periodo` INT NOT NULL , `semana` TEXT NOT NULL ) ENGINE = MyISAM;')
+        $creaf3 = mysqli_query($conexion, 'CREATE TABLE f3' . $usuario . ' ( `codigo` TEXT NOT NULL , `asignatura` TEXT NOT NULL , `seccion` TEXT NOT NULL  , `hi` INT NOT NULL , `hf` INT NOT NULL , `dias` TEXT NOT NULL , `edificio` TEXT NOT NULL , `aula` TEXT NOT NULL , `uv` INT NOT NULL , `obs` TEXT NOT NULL , `periodo` INT NOT NULL , `semana` TEXT NOT NULL, `anio` TEXT NOT NULL ) ENGINE = MyISAM;')
             or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
         
         $registro = json_encode($_POST);

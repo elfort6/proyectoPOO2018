@@ -19,8 +19,8 @@ var cargarf3 = function () {
                             <td>${respuesta[i].dias}</td>
                             <td>${respuesta[i].edificio}</td>
                             <td>${respuesta[i].aula }</td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
-                        </tr>
+                            <td><button type="button" class="btn" style="padding: 1px; background:none;" onclick='cancelar("${respuesta[i].codigo}","${respuesta[i].seccion}_${respuesta[i].codigo}_${respuesta[i].periodo}_${respuesta[i].anio}");'>Cancelar</button></td>
+                            </tr>
                     `
                 );
             }
@@ -160,3 +160,24 @@ $(document).ready(function () {
     });
 
 });
+
+function cancelar(parametro,parametro2){
+    console.log(parametro);
+    console.log(parametro2);
+    $.ajax({
+        url: "ajax/cancelar.php",
+        method:"POST",
+        data:"codigo="+parametro+
+        "&tabla="+parametro2,
+        dataType: "text",
+        success: function(respuesta) {
+            console.log(respuesta);
+            cargarf3();
+        },
+        error: function(error) {
+            console.error("no funcionó");
+        }
+    });
+        
+
+}

@@ -24,7 +24,7 @@ var cargarf3main = function () {
                             <td>${respuesta[i].aula }</td>
                             <td>${respuesta[i].uv }</td>
                             <td></td>
-                            <td><button type="button" class="btn" style="padding: 1px; background:none;">Cancelar</button></td>
+                            <td>${respuesta[i].periodo}</td>
                         </tr>
                     `
                 );

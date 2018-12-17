@@ -2,7 +2,7 @@
     session_start();
     include("../../class/class-conexion.php");
 
-$conexion=new Conexion();
+     $conexion=new Conexion();
 
     $resultado=$conexion->ejecutarConsulta('SELECT * FROM '.'`'.'f3'.$_SESSION['cuenta'].'`'.'');
 
@@ -21,13 +21,14 @@ $conexion=new Conexion();
     $aula =$datos['aula'];
     $uv=$datos['uv'];
     $periodo=$datos['periodo'];
+    $anio=$datos['anio'];
     
     
     
     $x=$x+1;
     $datos1[] = array('codigo'=> $codigo, 'asignatura'=> $asignatura, 'seccion'=> $seccion, 'hi'=> $hi,
                         'hf'=> $hf, 'dias'=> $dias, 'edificio'=> $edificio,'aula'=> $aula,
-                        'uv'=> $uv,'periodo'=> $periodo);
+                        'uv'=> $uv,'periodo'=> $periodo,'anio'=> $anio);
 
 }
 $dats1[] = array('total'=> $x);

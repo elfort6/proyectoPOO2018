@@ -19,7 +19,7 @@ $nombreseccion=$resultado->fetch_assoc();
 //consula para registrar la seccion en la forma 03 del estudiante
 $conexion->ejecutarConsulta(
     'INSERT INTO '.'`'.'f3'.$_SESSION['cuenta'].'`'.
-    '(`codigo`, `asignatura`, `seccion`, `hi`, `hf`, `dias`, `edificio`, `aula`, `uv`, `obs`, `periodo`, `semana`) 
+    '(`codigo`, `asignatura`, `seccion`, `hi`, `hf`, `dias`, `edificio`, `aula`, `uv`, `obs`, `periodo`, `semana`, `anio`) 
     VALUES ("'.$datos['asignatura'].'",
     "'.$nombreseccion['nombre'].'",
     "'.$datos['seccion'].'",
@@ -31,7 +31,8 @@ $conexion->ejecutarConsulta(
     "'.$nombreseccion['uv'].'",
     "",
     "'.$datos['periodo'].'",
-    "")');
+    "",
+    "'.$datos['anio'].'")');
     
     echo("se registró todo.");
 
