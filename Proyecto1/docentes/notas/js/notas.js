@@ -1,10 +1,43 @@
 var numeroEstudiantes=0;
-$(document).ready(function(){
 
-    var parametro="codigoSeccion="+$("#codigoSeccion").val();
+var parametro="codigoSeccion="+$("#codigoSeccion").val();
+
+
+function cargarTabla(){
+    $.ajax({
+        url: "../secciones/ajax/listado.php",
+        method:"POST",
+        data: parametro,
+        dataType: "json",
+        success: function (respuesta) {
+            console.log(respuesta);
+            console.log(respuesta.length);
+            numeroEstudiantes=respuesta.length;
+            $("#lista-notas").html(``);
+            for (let i = 0; i < respuesta.length; i++) {
+                $("#lista-notas").append(
+                    `<tr>
+                        <td id="${i+1}">${i+1}</td>
+                        <td id="cuenta-${i+1}">${respuesta[i]['cuenta']}</td>
+                        <td id="nombre-${i+1}">${respuesta[i]['nombre']}</td>
+                        <td id="nota-${i+1}">${respuesta[i]['nota']}</td>
+                        <td class="col-nota"><input id="nota-nueva-${i+1}" class="form-control num-nota" type="number"></td>
+                    </tr>`
+                );
+            }
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
+}
+
+
+
+$(document).ready(function(){
     $("#listado-est").attr("href", `../secciones/index.php?${parametro}`);
     $("#listado-notas").attr("href", `?${parametro}`);
-    console.log(parametro);
+    //console.log(parametro);
 
     //cargar la informacion de la seccion
     $.ajax({
@@ -35,33 +68,9 @@ $(document).ready(function(){
         }
     });
 
-
     //cargar el listado de los estudiantes cuenta y nombre
-    $.ajax({
-        url: "../secciones/ajax/listado.php",
-        method:"POST",
-        data: parametro,
-        dataType: "json",
-        success: function (respuesta) {
-            console.log(respuesta);
-            console.log(respuesta.length);
-            numeroEstudiantes=respuesta.length;
-            for (let i = 0; i < respuesta.length; i++) {
-                $("#lista-notas").append(
-                    `<tr>
-                        <td id="${i+1}">${i+1}</td>
-                        <td id="cuenta-${i+1}">${respuesta[i]['cuenta']}</td>
-                        <td id="nombre-${i+1}">${respuesta[i]['nombre']}</td>
-                        <td id="nota-${i+1}">${respuesta[i]['nota']}</td>
-                        <td class="col-nota"><input id="nota-nueva-${i+1}" class="form-control num-nota" type="number"></td>
-                    </tr>`
-                );
-            }
-        },
-        error: function (error) {
-            console.error(error);
-        }
-    });
+    cargarTabla();
+    
 });
 
 //configurar la funcionalidad del boton guardar cambios
@@ -101,5 +110,6 @@ $("#guardar-cambios").click(function(){
             console.error(error);
         }
     });
+    cargarTabla();
 
 });

@@ -7,6 +7,6 @@
         $conexion->ejecutarConsulta('UPDATE '.'`'.$_POST['codigoSeccion'].'`'.' SET `nota`="'.$_POST['item'][$i]['nota'].'" WHERE `cuenta`="'.$_POST['item'][$i]['cuenta'].'"')
         or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
     }
-
+    
     echo json_encode($_POST);
 ?>

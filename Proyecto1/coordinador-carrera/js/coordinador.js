@@ -25,6 +25,7 @@ $(document).ready(function () {
             alert("No hay docentes disponibles para esta carrera.");
         }
     });
+    
     //tambien se buscan las asignaturas
     $.ajax({
         url: "ajax/asignaturas.php",
