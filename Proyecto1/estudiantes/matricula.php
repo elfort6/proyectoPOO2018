@@ -96,68 +96,8 @@ if ($_SESSION['lvl']==1){
             </div>
         </div>
 
-        <!-- Asignaturas en lista de espera -->
-        <div class="container-fluid forma03-tabla my-5">
-            <div class="text-center">
-                <div class=" encabezado">
-                    Asignaturas En Lista De Espera
-                </div>
-            </div>
-
-            <div>
-                <table class="table table-striped table-responsive-lg">
-                    <thead>
-                        <tr>
-                            <th>Cod.</th>
-                            <th>Asignatura</th>
-                            <th>Sección</th>
-                            <th>HI</th>
-                            <th>HF</th>
-                            <th>Dias</th>
-                            <th>Edificio</th>
-                            <th>Aula</th>
-                            <th>Cancelar</th>
-                            <!-- <th>Semana</th> -->
-                        </tr>
-                    </thead>
-                    <tbody class="">
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Laboratorios Pre Matriculados -->
-        <div class="container-fluid forma03-tabla my-5">
-            <div class="text-center">
-                <div class=" encabezado">
-                    Laboratorios Pre-Matriculados
-                </div>
-            </div>
-
-            <div>
-                <table class="table table-striped table-responsive-lg">
-                    <thead>
-                        <tr>
-                            <th>Cod.</th>
-                            <th>Asignatura</th>
-                            <th>Sección</th>
-                            <th>HI</th>
-                            <th>HF</th>
-                            <th>Dias</th>
-                            <th>Edificio</th>
-                            <th>Aula</th>
-                            <th>Cancelar</th>
-                            <!-- <th>Semana</th> -->
-                        </tr>
-                    </thead>
-                    <tbody class="f3">
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+        
+      
         <?php
         include("footer.html");
         ?>

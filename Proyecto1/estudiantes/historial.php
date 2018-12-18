@@ -1,5 +1,7 @@
 <?php
 session_start();
+include("../class/class-conexion.php");
+ $conexion=new Conexion();
 if ($_SESSION['lvl']==1){
 ?>
 <!DOCTYPE html>
@@ -37,14 +39,34 @@ if ($_SESSION['lvl']==1){
                         Cuenta: <?php echo($_SESSION['cuenta'])?>
                     </p>
                     <p>
-                        Carrera: INGENIERIA EN SISTEMAS
+                        Carrera: <?php
+                                                include("../class/class-sesion.php");
+                                                $consulta='SELECT `nombre` FROM `ofertaacademica` WHERE  carrera="'.$_SESSION['carrera'].'"';
+                                                $resultado=mysqli_query(sesion::conexion(), $consulta);
+                                                 $fila=mysqli_fetch_row($resultado);
+                                                echo($fila[0]);
+                                                 ?>
                     </p>
                 </div>
                 <div class="col-md-4">
 
-                    <p>Centro: Tangamandapio</p>
-                    <p>Año: 2027</p>
-                    <p>Indice Global: n/a</p>
+                    <p>Centro: Ciudad Universitaria</p>
+                    <p>Año: null</p>
+                    <p>Indice Global: <?php 
+                                        $resultado=$conexion->ejecutarConsulta('SELECT `uv`,`calificacion` FROM '.'`'.'ha'.$_SESSION['cuenta'].'`'.'');
+                                        $suv=0;
+                                        $note=0;
+                                        while( $datos=$resultado->fetch_assoc()) 
+                                        { 
+                                            $suv = ($suv +$datos['uv']);
+                                            $note= ($note+$datos['uv']*$datos['calificacion']);
+                                        }
+
+                                        if($suv!=0){ 
+                                        echo($note/$suv);
+                                        }else{echo(0);}
+                                       ?>
+                    </p>
                     <p>Indice de periodo: n/a</p>
                 </div>
             </div>
@@ -67,46 +89,53 @@ if ($_SESSION['lvl']==1){
 
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>SC101</td>
-                        <td>Sociologia</td>
-                        <td>4</td>
-                        <td>1300</td>
-                        <td>2016</td>
-                        <td>1</td>
-                        <td>97</td>
-                        <td>APR</td>
+                <?php
+                $resultado=$conexion->ejecutarConsulta('SELECT * FROM '.'`'.'ha'.$_SESSION['cuenta'].'`'.'');
+
+                while( $datos=$resultado->fetch_assoc()) 
+                { 
+                  $codigo=$datos['codigo'];
+                  $asignatura=$datos['asignatura'];
+                  $uv=$datos['uv'];
+                  $seccion=$datos['seccion'];
+                  $anio=$datos['anio'];
+                  $periodo=$datos['periodo'];
+                  $calificacion=$datos['calificacion'];
+                  $observacion=$datos['observacion'];
+                  if($calificacion<65){ 
+                  echo('<tr class="table-danger">
+                  <td>'.$codigo.'</td>
+                  <td>'.$asignatura.'</td>
+                  <td>'.$uv.'</td>
+                  <td>'.$anio.'</td>
+                  <td>'.$seccion.'</td>
+                  <td>'.$periodo.'</td>
+                  <td>'.$calificacion.'</td>
+                  <td>'.$observacion.'</td>
+                  </tr>
+                  
+                  ');
+                   }else{  
+                    echo('<tr>
+                    <td>'.$codigo.'</td>
+                    <td>'.$asignatura.'</td>
+                    <td>'.$uv.'</td>
+                    <td>'.$anio.'</td>
+                    <td>'.$seccion.'</td>
+                    <td>'.$periodo.'</td>
+                    <td>'.$calificacion.'</td>
+                    <td>'.$observacion.'</td>
                     </tr>
-                    <tr class="table-danger">
-                        <td>MM110</td>
-                        <td>Matematica 1</td>
-                        <td>5</td>
-                        <td>1100</td>
-                        <td>2016</td>
-                        <td>1</td>
-                        <td>64.9999</td>
-                        <td>RPB</td>
-                    </tr>
-                    <tr>
-                        <td>SC101</td>
-                        <td>Sociologia</td>
-                        <td>4</td>
-                        <td>1300</td>
-                        <td>2016</td>
-                        <td>1</td>
-                        <td>97</td>
-                        <td>APR</td>
-                    </tr>
-                    <tr>
-                        <td>SC101</td>
-                        <td>Sociologia</td>
-                        <td>4</td>
-                        <td>1300</td>
-                        <td>2016</td>
-                        <td>1</td>
-                        <td>97</td>
-                        <td>APR</td>
-                    </tr>
+                    
+                    ');
+
+
+                   }
+
+
+                  }
+
+                ?>
 
                 </tbody>
             </table>
