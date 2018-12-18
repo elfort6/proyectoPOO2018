@@ -18,7 +18,9 @@ if($valida1=($conexion->ejecutarConsulta('SELECT * FROM '.'`'.'f3'.$_SESSION['cu
 
     if($valida1=($conexion->ejecutarConsulta('SELECT * FROM '.'`'.'f3'.$_SESSION['cuenta'].'`'.'  WHERE `hi`="'.$datos['hora_inicial'].'"'))->fetch_assoc())
     {echo("ya hay clase matriculada a esa hora");}else{
-
+        
+        if($valida1=($conexion->ejecutarConsulta('SELECT * FROM '.'`'.'ha'.$_SESSION['cuenta'].'`'.'  WHERE `codigo`="'.$datos['asignatura'].'" AND `calificacion`>=65 '))->fetch_assoc())
+        {echo("la clase ya la paso");}else{
 //////////////////////////////////////////////////////////////si valida ok/////////////////////////////////////////
 //consulta para registrar el estudiante en la seccion
 $conexion->ejecutarConsulta('INSERT INTO '.'`'.$_POST['seccion'].'`'.'(`cuenta`, `nota`) VALUES ("'.$_SESSION['cuenta'].'","0")');
@@ -40,9 +42,9 @@ $conexion->ejecutarConsulta(
     "",
     "'.$datos['anio'].'")');
     
-    echo("exito");
+    echo("clase matriculada");
     //////////////////////////////////////////////////////////////fin si valida ok/////////////////////////////////////////
-
+          }
     }
 }
 

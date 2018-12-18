@@ -41,12 +41,12 @@ switch ($_GET["opcion"]) {
         $conexion=new Conexion();
         $consulta='SELECT * FROM `secciones` WHERE `asignatura` like "'.$_SESSION['carrera'].'%"';
         $resultado=$conexion->ejecutarConsulta($consulta);
-        
+       
         $registros=array();
         $i=0;
-
+        
         while($fila=$resultado->fetch_assoc()){
-
+            //echo($fila['seccion']);
             $registros[$i]['seccion']=$fila['seccion'];
 
             $registros[$i]['asignatura']=$fila['asignatura'];
@@ -57,7 +57,7 @@ switch ($_GET["opcion"]) {
 
             $registros[$i]['nombreasignatura']=$nombre;
 
-
+            
             $registros[$i]['docente']=$fila['docente'];
             //consultar nombre de docente
             $consulta='SELECT `primer-nombre`, `primer-apellido` FROM `docentes` WHERE `n_empleado`="'.$fila['docente'].'"';
@@ -77,8 +77,8 @@ switch ($_GET["opcion"]) {
 
             $i++;
         }
-
-        echo json_encode($registros);
+        //var_dump($registros);
+        echo(json_encode($registros));
 
     break;
 }
