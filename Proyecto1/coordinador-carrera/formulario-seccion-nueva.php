@@ -158,7 +158,7 @@
 
     <div class="row">
         <div class="col-12">
-            <button type="submit" class="btn aceptar" style="margin-bottom: 1em; background: #2980b9; color:white;">Crear
+            <button type="submit" id="crear-seccion" class="btn aceptar" style="margin-bottom: 1em; background: #2980b9; color:white;">Crear
                 Sección</button>
         </div>
     </div>

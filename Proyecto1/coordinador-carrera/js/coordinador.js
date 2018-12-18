@@ -71,6 +71,7 @@ $(document).ready(function () {
                     event.preventDefault();
                     event.stopPropagation();
                     console.log("tamos mal :c");
+                    form.classList.add('was-validated');
                 } else {
                     console.log("tamos bien");
                     var parametros = $("#seccionnueva").serialize();
@@ -88,7 +89,9 @@ $(document).ready(function () {
                         }
                     });
                 }
-                form.classList.add('was-validated');
+                cargarTabla();
+                limpiar();
+
             }, false);
         });
     }, false);
@@ -110,6 +113,11 @@ function limpiar() {
     $("#hf").val("");
     $("#eficicio").val("");
     $("#aula").val("");
+
+    $("#crear-seccion").html("Crear Seccion");
+
+    //$("#seccionnueva").removeClass('was-validated');
+
 }
 
 function cargarTabla() {
@@ -175,9 +183,14 @@ function llenarFormulario(seccion,nombreasignatura,nombredocente,cupos,dias,peri
     $("#dias").val(dias);
     $("#periodo").val(periodo);
     $("#anio").val(anio);
-    $("#hi").val("0"+hora_inicial);
-    $("#hf").val("0"+hora_final);
+
+
+    $("#hi").val(hora_inicial);
+    $("#hf").val(hora_final);
+
     $("#eficicio").val(edificio);
     $("#aula").val(aula);
+
+    $("#crear-seccion").html("Actualizar Seccion");
 
 }
