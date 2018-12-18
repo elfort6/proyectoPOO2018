@@ -2,6 +2,7 @@
 session_start();
 include("../../class/class-conexion.php");
 
+
 $conexion=new Conexion();
 //consulta para obtener la informacion de las seccion
 $resultado=$conexion->ejecutarConsulta('SELECT * FROM `secciones` WHERE `codigosec`="'.$_POST['seccion'].'"');
