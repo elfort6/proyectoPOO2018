@@ -3,10 +3,6 @@ session_start();
 include("../../class/class-conexion.php");
 
 $conexion=new Conexion();
-
-//consulta para registrar el estudiante en la seccion
-$conexion->ejecutarConsulta('INSERT INTO '.'`'.$_POST['seccion'].'`'.'(`cuenta`, `nota`) VALUES ("'.$_SESSION['cuenta'].'","0")');
-
 //consulta para obtener la informacion de las seccion
 $resultado=$conexion->ejecutarConsulta('SELECT * FROM `secciones` WHERE `codigosec`="'.$_POST['seccion'].'"');
 $datos=$resultado->fetch_assoc();
@@ -16,10 +12,20 @@ $resultado=$conexion->ejecutarConsulta('SELECT `nombre`, `uv` FROM `asignaturas`
 $nombreseccion=$resultado->fetch_assoc();
 
 
+
+if($valida1=($conexion->ejecutarConsulta('SELECT * FROM '.'`'.'f3'.$_SESSION['cuenta'].'`'.'  WHERE `codigo`="'.$datos['asignatura'].'"'))->fetch_assoc())
+{echo("clase ya matriculada");}else{
+
+    if($valida1=($conexion->ejecutarConsulta('SELECT * FROM '.'`'.'f3'.$_SESSION['cuenta'].'`'.'  WHERE `hi`="'.$datos['hora_inicial'].'"'))->fetch_assoc())
+    {echo("ya hay clase matriculada a esa hora");}else{
+
+//////////////////////////////////////////////////////////////si valida ok/////////////////////////////////////////
+//consulta para registrar el estudiante en la seccion
+$conexion->ejecutarConsulta('INSERT INTO '.'`'.$_POST['seccion'].'`'.'(`cuenta`, `nota`) VALUES ("'.$_SESSION['cuenta'].'","0")');
 //consula para registrar la seccion en la forma 03 del estudiante
 $conexion->ejecutarConsulta(
-    'INSERT INTO '.'`'.'f3'.$_SESSION['cuenta'].'`'.
-    '(`codigo`, `asignatura`, `seccion`, `hi`, `hf`, `dias`, `edificio`, `aula`, `uv`, `obs`, `periodo`, `semana`, `anio`) 
+    'INSERT INTO '.'`'.'f3'.$_SESSION['cuenta'].'`'.' 
+    (`codigo`, `asignatura`, `seccion`, `hi`, `hf`, `dias`, `edificio`, `aula`, `uv`, `obs`, `periodo`, `semana`, `anio`) 
     VALUES ("'.$datos['asignatura'].'",
     "'.$nombreseccion['nombre'].'",
     "'.$datos['seccion'].'",
@@ -34,6 +40,11 @@ $conexion->ejecutarConsulta(
     "",
     "'.$datos['anio'].'")');
     
-    echo("se registró todo.");
+    echo("exito");
+    //////////////////////////////////////////////////////////////fin si valida ok/////////////////////////////////////////
+
+    }
+}
+
 
 ?>

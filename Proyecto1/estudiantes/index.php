@@ -50,14 +50,20 @@ if ($_SESSION['lvl']==1){
                                 Cuenta: <?php echo($_SESSION['cuenta'])?>
                             </p>
                             <p>
-                                Carrera: INGENIERIA EN SISTEMAS
+                                Carrera:  <?php
+                                                include("../class/class-sesion.php");
+                                                $consulta='SELECT `nombre` FROM `ofertaacademica` WHERE  carrera="'.$_SESSION['carrera'].'"';
+                                                $resultado=mysqli_query(sesion::conexion(), $consulta);
+                                                 $fila=mysqli_fetch_row($resultado);
+                                                echo($fila[0]);
+                                                 ?>
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <p>Centro: Tangamandapio</p>
-                    <p>Año: 2027</p>
+                    <p>Centro: Ciudad Universitaria</p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -95,54 +101,6 @@ if ($_SESSION['lvl']==1){
             </div>
         </div>
         <!-- Fin tabla 03/////// -->
-
-        <!-- Laboratorios Matriculados -->
-        <div class="container-fluid forma03-tabla my-5">
-            <div class="text-center">
-                <div class=" encabezado">
-                    Laboratorios Matriculados
-                </div>
-            </div>
-
-            <div>
-                <table class="table table-striped table-responsive-lg">
-                    <thead>
-                        <tr>
-                            <th>Cod.</th>
-                            <th>Asignatura</th>
-                            <th>Sección</th>
-                            <th>HI</th>
-                            <th>HF</th>
-                            <th>Dias</th>
-                            <th>Edificio</th>
-                            <th>Aula</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>MM111</td>
-                            <td>Geometría y Trigonometría</td>
-                            <td>1400</td>
-                            <td>1400</td>
-                            <td>1500</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>MM202</td>
-                            <td>Cálculo 2</td>
-                            <td>1700</td>
-                            <td>1700</td>
-                            <td>1800</td>
-                            <td>LuMaMiJuVi</td>
-                            <td>5</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
 
     <?php
