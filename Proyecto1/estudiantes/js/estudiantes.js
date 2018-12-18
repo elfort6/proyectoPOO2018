@@ -150,6 +150,7 @@ $(document).ready(function () {
             dataType: "text",
             success: function(respuesta) {
                 console.log(respuesta);
+                alert(respuesta);
                 cargarf3();
             },
             error: function(error) {
