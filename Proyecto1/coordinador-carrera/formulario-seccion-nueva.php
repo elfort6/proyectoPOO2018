@@ -1,10 +1,10 @@
 <form class="needs-validation" id="seccionnueva" novalidate>
     <div class="row">
 
-         <div class="col-12 col-md-3">
+        <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel5" class="encabezado-tabla my-2">Sección:</label>
-                <input type="text" class="form-control" name="seccion" required>
+                <input type="text" class="form-control" name="seccion" id="seccion" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>
@@ -14,7 +14,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel1" class="encabezado-tabla my-2">Asignatura:</label>
-                <select class="form-control seleccion-asignatura" name="asignatura" required>
+                <select class="form-control seleccion-asignatura" name="asignatura" id="asignatura" required>
                     <option value=""></option>
                 </select>
                 <div class="invalid-feedback">
@@ -25,7 +25,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel3" class="encabezado-tabla my-2">Docente:</label>
-                <select class="form-control seleccion-docente" name="docente" required>
+                <select class="form-control seleccion-docente" name="docente" id="docente" required>
                     <option value=""></option>
                 </select>
                 <div class="invalid-feedback">
@@ -36,7 +36,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel4" class="encabezado-tabla my-2">Cupos:</label>
-                <input type="number" class="form-control" name="cupos" required>
+                <input type="number" class="form-control" name="cupos" id="cupos" required>
                 <div class="invalid-feedback">
                     Se requieren cupos válidos.
                 </div>
@@ -46,7 +46,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel5" class="encabezado-tabla my-2">Dias:</label>
-                <input type="text" class="form-control" name="dias" placeholder="LuMaMiJuViSa" required>
+                <input type="text" class="form-control" name="dias" id="dias" placeholder="LuMaMiJuViSa" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>
@@ -56,7 +56,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel6" class="encabezado-tabla my-2">Periodo:</label>
-                <select class="form-control" name="periodo" required>
+                <select class="form-control" name="periodo" id="periodo" required>
                     <option value=""></option>
                     <option>1</option>
                     <option>2</option>
@@ -71,7 +71,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel5" class="encabezado-tabla my-2">Año:</label>
-                <input type="text" class="form-control" name="anio" required>
+                <input type="text" class="form-control" name="anio" id="anio" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>
@@ -81,13 +81,23 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel7" class="encabezado-tabla my-2">Hora Inicial:</label>
-                <select class="form-control" name="hi" required>
+                <select class="form-control" name="hi" id="hi" required>
                     <option value=""></option>
+                    <option>0600</option>
                     <option>0700</option>
                     <option>0800</option>
                     <option>0900</option>
                     <option>1000</option>
                     <option>1100</option>
+                    <option>1200</option>
+                    <option>1300</option>
+                    <option>1400</option>
+                    <option>1500</option>
+                    <option>1600</option>
+                    <option>1700</option>
+                    <option>1800</option>
+                    <option>1900</option>
+                    <option>2000</option>
                 </select>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
@@ -97,13 +107,23 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel8" class="encabezado-tabla my-2">Hora Final:</label>
-                <select class="form-control" name="hf" required>
+                <select class="form-control" name="hf" id="hf" required>
                     <option value=""></option>
                     <option>0700</option>
                     <option>0800</option>
                     <option>0900</option>
                     <option>1000</option>
                     <option>1100</option>
+                    <option>1200</option>
+                    <option>1300</option>
+                    <option>1400</option>
+                    <option>1500</option>
+                    <option>1600</option>
+                    <option>1700</option>
+                    <option>1800</option>
+                    <option>1900</option>
+                    <option>2000</option>
+                    <option>2100</option>
                 </select>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
@@ -113,7 +133,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel9" class="encabezado-tabla my-2">Edificio:</label>
-                <select class="form-control" name="eficicio" required>
+                <select class="form-control" name="eficicio" id="eficicio" required>
                     <option value=""></option>
                     <option>F1</option>
                     <option>D1</option>
@@ -128,7 +148,7 @@
         <div class="col-12 col-md-3">
             <div class="form-group">
                 <label for="sel10" class="encabezado-tabla my-2">Aula:</label>
-                <input type="text" class="form-control" name="aula" required>
+                <input type="text" class="form-control" name="aula" id="aula" required>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
                 </div>
