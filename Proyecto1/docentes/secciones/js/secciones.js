@@ -87,7 +87,7 @@ function copiarAlPortapapeles(id_elemento) {
   }
 
   function descargarpdf() {
-    location.href ="php/descargarpdf.php?seccion="+$("#codigoSeccion").val();
+    location.href ="php/descargarpdf?seccion="+$("#codigoSeccion").val();
     console.log("descarga pdf");
   
 }
