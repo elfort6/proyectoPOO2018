@@ -12,7 +12,7 @@ switch ($_GET["opcion"]) {
         $ingresarusu = mysqli_query($conexion, 'insert into usuarios(cuenta,clave,nivel) values
         ("' . $usuario . '","' . $contraseña . '","1")') or die('<p>Error al registrar</p><br>' . mysqli_error($conexion));
 
-        $ingresarestu = mysqli_query($conexion, 'insert into estudiantes(cuenta,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,carrera,n_identidad,email,foto) values
+        $ingresarestu = mysqli_query($conexion, 'insert into estudiantes(cuenta,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,carrera,n_identidad,email,`indice-pe`,foto) values
         ("' . $usuario . '",
         "' . $_POST["primer-nombre"] . '",
         "' . $_POST["segundo-nombre"] . '",
@@ -22,6 +22,7 @@ switch ($_GET["opcion"]) {
         "' . $_POST["carrera"] . '",
         "' . $_POST["numero-identidad"] . '",
         "' . $_POST["email"] . '",
+        "0",
         "img/perfil-por-defecto.jpg")')
             or die('<p>Error al registrar estudiante</p><br>' . mysqli_error($conexion));
 

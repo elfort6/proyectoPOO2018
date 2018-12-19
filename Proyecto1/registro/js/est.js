@@ -30,6 +30,7 @@ $.ajax({
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                    form.classList.add('was-validated');
                     console.log("tamos mal :c");
                 } else {
                     /* console.log("tamos bien"); */
@@ -42,14 +43,18 @@ $.ajax({
                         dataType: "json",
                         data: parametros,
                         success: function (respuesta) {
+                            alert("se registro");
+                            limpiar();
                             console.log(respuesta);
                         },
                         error: function (error) {
                             console.log(error);
+                            alert("error al registrar la cuenta");
+                            limpiar();
                         }
                     });
                 }
-                form.classList.add('was-validated');
+                
             }, false);
         });
     }, false);
@@ -58,3 +63,17 @@ $.ajax({
 $("#formulario-estudiante").submit(function () {
     return false;
 });
+
+function limpiar() {
+    $("#primer-nombre").val("");
+    $("#segundo-nombre").val("");
+    $("#primer-apellido").val("");
+    $("#segundo-apellido").val("");
+    $("#fecha-nacimiento").val("");
+    $("#numero-cuenta").val("");
+    $("#contraseña").val("");
+    $("#seleccion-carrera").val("");
+    $("#numero-identidad").val("");
+    $("#email").val("");
+
+}

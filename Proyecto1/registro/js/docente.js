@@ -31,6 +31,7 @@ $.ajax({
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                    form.classList.add('was-validated');
                     //console.log("tamos mal :c");
                 } else {
                     //console.log("tamos bien");
@@ -43,14 +44,19 @@ $.ajax({
                         dataType: "text",
                         data: parametros,
                         success: function (respuesta) {
+                            limpiar();
+                            alert("registrado"); 
                             console.log(respuesta);
                         },
                         error: function (error) {
                             console.log(error);
+                            limpiar();
+                            alert("error al registrar datos"); 
+                        
                         }
                     });
                 }
-                form.classList.add('was-validated');
+                
             }, false);
         });
     }, false);
@@ -59,3 +65,19 @@ $.ajax({
 $("#formulario-docente").submit(function () {
     return false;
 });
+
+function limpiar() {
+    $("#primer-nombre").val("");
+    $("#segundo-nombre").val("");
+    $("#primer-apellido").val("");
+    $("#segundo-apellido").val("");
+    $("#fecha-nacimiento").val("");
+    $("#numero-cuenta").val("");
+    $("#nivel-academico").val("");
+    $("#contraseña").val("");
+    $("#seleccion-carrera").val("");
+    $("#contrato").val("");
+    $("#numero-identidad").val("");
+    $("#email").val("");
+
+}
