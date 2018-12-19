@@ -76,4 +76,6 @@ function limpiar() {
     $("#numero-identidad").val("");
     $("#email").val("");
 
+    $("#formulario-estudiante").removeClass('was-validated');
+
 }

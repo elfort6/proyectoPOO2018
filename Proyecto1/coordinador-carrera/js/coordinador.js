@@ -83,14 +83,18 @@ $(document).ready(function () {
                         data: parametros,
                         success: function (respuesta) {
                             console.log(respuesta);
+                            alert("Se ha creado la seccion con exito.");
+                            cargarTabla();
+                            limpiar();
                         },
                         error: function (error) {
                             console.log(error);
+                            alert("No se ha podido crear la seccion.");
+                            cargarTabla();
+                            limpiar();
                         }
                     });
                 }
-                cargarTabla();
-                limpiar();
 
             }, false);
         });
@@ -116,7 +120,7 @@ function limpiar() {
 
     $("#crear-seccion").html("Crear Seccion");
 
-    //$("#seccionnueva").removeClass('was-validated');
+    $("#seccionnueva").removeClass('was-validated');
 
 }
 

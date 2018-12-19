@@ -80,4 +80,5 @@ function limpiar() {
     $("#numero-identidad").val("");
     $("#email").val("");
 
+    $("#formulario-docente").removeClass('was-validated');
 }

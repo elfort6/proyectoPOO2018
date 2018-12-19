@@ -26,9 +26,6 @@
                         <span class="usu"><?php echo($_SESSION['name'])?></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                        <a class="dropdown-item" href="#">Configuraciones</a>
-
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../php/cerrar_sesion.php">salir</a>
                     </div>

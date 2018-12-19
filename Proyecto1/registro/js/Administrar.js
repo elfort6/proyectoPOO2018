@@ -90,6 +90,7 @@ function terminarperiodo(){
         dataType: "text",
         success: function(respuesta) {
             console.log(respuesta);
+            alert("El periodo a finalizado con exito.");
         },
         error: function(error) {
             console.log(error);

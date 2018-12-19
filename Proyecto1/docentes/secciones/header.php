@@ -17,7 +17,7 @@
                     <li class="nav-item"><button type="button" class="nav-item btn perfil"  style="box-shadow:none;" onclick="verifica();">Subir Notas</button></li>
                     <?php if ($_SESSION['lvl'] == 3) {
     ?>
-                    <li class="nav-item"><a class="nav-link" href="../coordinador-carrera">Cordinador</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../coordinador-carrera">Cordinador</a></li>
                     <?php
 } ?>
                 </ul>
@@ -29,8 +29,6 @@
                         <span class="usu"><?php echo($_SESSION['name'])?></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-                        <a class="dropdown-item" href="#">Configuraciones</a>
 
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../../php/cerrar_sesion.php">salir</a>

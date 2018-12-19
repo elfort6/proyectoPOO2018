@@ -71,6 +71,7 @@ $(document).ready(function() {
                     event.preventDefault();
                     event.stopPropagation();
                     //console.log("tamos mal :c");
+                    form.classList.add('was-validated');
                 } else {
                     //console.log("tamos bien");
                     var parametros = $("#formulario-coordinador").serialize();
@@ -81,15 +82,19 @@ $(document).ready(function() {
                         dataType: "text",
                         data: parametros,
                         success: function (respuesta) {
+                            limpiar();
+                            alert("Se asignó el coordinador correctamente.");
                             console.log(respuesta);
                         },
                         error: function (error) {
                             console.log(error);
+                            limpiar();
+                            alert("No se pudo asignar el coordinador");
                         }
                     });
 
                 }
-                form.classList.add('was-validated');
+                
             }, false);
         });
     }, false);
@@ -98,3 +103,10 @@ $(document).ready(function() {
 $("#formulario-coordinador").submit(function () {
     return false;
 });
+
+
+function limpiar() {
+    $("#seleccion-carrera").val("");
+    $("#seleccion-docente").val("");
+    $("#formulario-coordinador").removeClass('was-validated');
+}

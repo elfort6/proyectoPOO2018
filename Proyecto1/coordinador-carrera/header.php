@@ -26,9 +26,6 @@
                         ?></span>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <div id="cambiar-perfil">
-                            <a class="dropdown-item" href="configuracion.html">Cambiar Contraseña</a>
-                        </div>
 
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="../php/cerrar_sesion.php">salir</a>

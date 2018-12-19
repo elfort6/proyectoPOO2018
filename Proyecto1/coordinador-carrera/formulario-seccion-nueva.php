@@ -137,8 +137,13 @@
                     <option value=""></option>
                     <option>F1</option>
                     <option>D1</option>
+                    <option>B1</option>
                     <option>B2</option>
                     <option>E1</option>
+                    <option>C3</option>
+                    <option>A1</option>
+                    <option>A2</option>
+                    <option>I</option>
                 </select>
                 <div class="invalid-feedback">
                     Se requiere llenar este campo.
