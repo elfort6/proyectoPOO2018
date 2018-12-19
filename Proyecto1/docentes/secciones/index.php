@@ -49,6 +49,7 @@
 
     <script src="../js/animaciones.js"></script>
     <script src="js/secciones.js"></script>
+    <script src="js/verificar.js"></script>
     
 </body>
 </html>
