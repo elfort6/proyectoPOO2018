@@ -1,9 +1,6 @@
 <?php
 session_start();
-include("../class/class-conexion.php");
-    $conexion=new Conexion();
-    $resultado=($conexion->ejecutarConsulta('SELECT * FROM `configuracion`'))->fetch_assoc();
-if ($_SESSION['lvl']==1 && $resultado['estadomatricula']==1){
+if ($_SESSION['lvl']==1){
 ?>
 <!DOCTYPE html>
 <html>
@@ -112,7 +109,6 @@ if ($_SESSION['lvl']==1 && $resultado['estadomatricula']==1){
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="js/f3.js"></script>
-    <script src="js/verifica.js"></script>
 
 </body>
 

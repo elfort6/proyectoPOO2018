@@ -13,7 +13,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" id="enlaces-menu">
-                    <li class="nav-item"><button type="button" class="nav-item btn perfil"  style="box-shadow:none;" onclick="verifica()">Matricula</button></li>
+                    <li class="nav-item"><a class="nav-link" href="matricula.php">Matricula</a></li>
                     <li class="nav-item"><a class="nav-link" href="historial.php">Historial Academico</a></li>
                 </ul>
 
