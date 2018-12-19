@@ -82,10 +82,12 @@ function copiarAlPortapapeles(id_elemento) {
 
   function descargarexcel() {
       console.log("descarga excel");
+      location.href ="php/descargarexcel.php?seccion="+$("#codigoSeccion").val();
     
   }
 
   function descargarpdf() {
+    location.href ="php/descargarpdf.php?seccion="+$("#codigoSeccion").val();
     console.log("descarga pdf");
   
 }
