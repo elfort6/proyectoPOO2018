@@ -112,6 +112,7 @@ if ($_SESSION['lvl']==1){
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="js/f3.js"></script>
+    <script src="js/verifica.js"></script>
 
 </body>
 

@@ -14,7 +14,7 @@
                 <ul class="navbar-nav mr-auto" id="enlaces-menu">
                     <li class="nav-item"><a class="nav-link" href="../">Secciones</a></li>
                     <li class="nav-item"><a id="listado-est" class="nav-link" href="">Listado de Alumnos</a></li>
-                    <li class="nav-item"><a id="listado-notas" class="nav-link" href="../notas">Subir Notas</a></li>
+                    <li class="nav-item"><button type="button" class="nav-item btn perfil"  style="box-shadow:none;" onclick="verifica();">Subir Notas</button></li>
                     <?php if ($_SESSION['lvl'] == 3) {
     ?>
                     <li class="nav-item"><a class="nav-link" href="../coordinador-carrera">Cordinador</a></li>
