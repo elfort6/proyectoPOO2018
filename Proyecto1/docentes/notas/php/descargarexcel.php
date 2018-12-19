@@ -17,8 +17,7 @@ $objPHPExcel->getProperties()
 	$objPHPExcel->setActiveSheetIndex(0);
 $objPHPExcel->getActiveSheet()->setTitle('Hoja 1');
 $objPHPExcel->getActiveSheet()->setCellValue('B1', 'nombre');
-$objPHPExcel->getActiveSheet()->setCellValue('C1', 'correo personal');
-$objPHPExcel->getActiveSheet()->setCellValue('D1', 'correo instintucional');
+$objPHPExcel->getActiveSheet()->setCellValue('C1', 'nota');
 
 $objPHPExcel->getActiveSheet()->setCellValue('A1', 'numero de cuenta');
 /////////////////////////////////////////codigo christopher////////////////////////////////////
@@ -51,8 +50,7 @@ include("../../../class/class-conexion.php");
         $datos[$i]['correo_institucional']=$datos[$i]['cuenta'].'@unah.hn';
         
        $objPHPExcel->getActiveSheet()->setCellValue('B'.($i+2).'', ''.$datos[$i]['nombre'].'');
-       $objPHPExcel->getActiveSheet()->setCellValue('C'.($i+2).'', ''.$datos[$i]['email'].'');
-       $objPHPExcel->getActiveSheet()->setCellValue('D'.($i+2).'', ''.$datos[$i]['correo_institucional'].'');
+       $objPHPExcel->getActiveSheet()->setCellValue('C'.($i+2).'', ''.$datos[$i]['nota'].'');
        $objPHPExcel->getActiveSheet()->setCellValue('A'.($i+2).'', ''.$datos[$i]['cuenta'].'');
 
     }

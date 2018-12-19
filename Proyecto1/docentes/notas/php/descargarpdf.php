@@ -10,9 +10,8 @@ $pdf->SetXY(75,30); //Agregamos una Pagina
  $pdf->Cell(40,10,'Lista de alumnos seccion: '.$_GET['seccion'].'',0,1,'C'); 
  $pdf->SetFont('Arial','B',11); //Establecemos tipo de fuente, negrita y tamaño 16
  $pdf->Cell(25,10,'numer cuenta  ',1,0,'C'); 
- $pdf->Cell(60,10,'nombre                  ',1,0,'C'); 
- $pdf->Cell(60,10,'correo personal         ',1,0,'C');  
- $pdf->Cell(60,10,'correo institucional    ',1,1,'C'); 
+ $pdf->Cell(100,10,'nombre                  ',1,0,'C'); 
+ $pdf->Cell(20,10,'nota        ',1,1,'C');  
  $pdf->SetFont('Arial','',11); //Establecemos tipo de fuente, negrita y tamaño 16
 /////////////////////////////////////////codigo christopher////////////////////////////////////
 include("../../../class/class-conexion.php");
@@ -44,9 +43,8 @@ include("../../../class/class-conexion.php");
 
 
         $pdf->Cell(25,10,''.$datos[$i]['cuenta'].'',1,0,'C'); 
-        $pdf->Cell(60,10,''.$datos[$i]['nombre'].'',1,0,'C'); 
-        $pdf->Cell(60,10,''.$datos[$i]['email'].'',1,0,'C');  
-        $pdf->Cell(60,10,''.$datos[$i]['correo_institucional'].'',1,1,'C'); 
+        $pdf->Cell(100,10,''.$datos[$i]['nombre'].'',1,0,'C'); 
+        $pdf->Cell(20,10,''.$datos[$i]['nota'].'',1,1,'C');
         
 
     }

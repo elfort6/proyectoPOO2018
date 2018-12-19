@@ -113,3 +113,15 @@ $("#guardar-cambios").click(function(){
     cargarTabla();
 
 });
+
+function descargarexcel() {
+    console.log("descarga excel");
+    location.href ="php/descargarexcel.php?seccion="+$("#codigoSeccion").val();
+  
+}
+
+function descargarpdf() {
+  location.href ="php/descargarpdf?seccion="+$("#codigoSeccion").val();
+  console.log("descarga pdf");
+
+}

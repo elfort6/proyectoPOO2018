@@ -13,10 +13,10 @@
                     <h3 class="card-title pricing-card-title mx-5">Descargar Listado de Alumnos:</h3>
                     <div class="mt-3 mb-4 mx-5">
                         <span style="font-size: 3em; color: red;">
-                            <i class="far fa-file-pdf icono icono1" title="PDF"></i>
+                            <i class="far fa-file-pdf icono icono1" title="PDF" onclick="descargarpdf();"></i>
                         </span>
                         <span style="font-size: 3em; color: green;">
-                            <i class="far fa-file-excel icono icono2" title="EXCEL"></i>
+                            <i class="far fa-file-excel icono icono2" title="EXCEL"  onclick="descargarexcel();"></i>
                         </span>
                     </div>
                 </div>
