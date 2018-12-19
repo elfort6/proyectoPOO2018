@@ -64,10 +64,6 @@ include("../../../class/class-conexion.php");
         $pdf->Cell(60,10,''.$datos[$i]['email'].'',1,0,'C');  
         $pdf->Cell(60,10,''.$datos[$i]['correo_institucional'].'',1,1,'C'); 
         
-       /* $objPHPExcel->getActiveSheet()->setCellValue('B'.($i+2).'', ''.$datos[$i]['nombre'].'');
-       $objPHPExcel->getActiveSheet()->setCellValue('C'.($i+2).'', ''.$datos[$i]['email'].'');
-       $objPHPExcel->getActiveSheet()->setCellValue('D'.($i+2).'', ''.$datos[$i]['correo_institucional'].'');
-       $objPHPExcel->getActiveSheet()->setCellValue('A'.($i+2).'', ''.$datos[$i]['cuenta'].''); */
 
     }
 
