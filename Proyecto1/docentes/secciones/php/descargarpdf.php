@@ -9,7 +9,7 @@
 $pdf->SetXY(75,30); //Agregamos una Pagina
  $pdf->Cell(40,10,'Lista de alumnos seccion: '.$_GET['seccion'].'',0,1,'C'); 
  $pdf->Output(); //Mostramos el PDF creado
- <?php
+
  //Agregamos la libreria FPDF
  require('../../../Class/fpdf/fpdf.php');
 
