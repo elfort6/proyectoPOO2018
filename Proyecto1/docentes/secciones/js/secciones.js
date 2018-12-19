@@ -79,3 +79,13 @@ function copiarAlPortapapeles(id_elemento) {
     document.execCommand("copy");
     document.body.removeChild(aux);
   }
+
+  function descargarexcel() {
+      console.log("descarga excel");
+    
+  }
+
+  function descargarpdf() {
+    console.log("descarga pdf");
+  
+}
