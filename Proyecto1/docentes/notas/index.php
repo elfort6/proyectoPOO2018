@@ -1,9 +1,6 @@
 <?php
     session_start();
-    include("../../class/class-conexion.php");
-    $conexion=new Conexion();
-    $resultado=($conexion->ejecutarConsulta('SELECT * FROM `configuracion`'))->fetch_assoc();
-    if (($_SESSION['lvl']==2 or $_SESSION['lvl']==3) && $resultado['estadosubirnotas']==1 ) {
+    if ($_SESSION['lvl']==2 or $_SESSION['lvl']==3) {
 ?>
 <!DOCTYPE html>
 <html>
